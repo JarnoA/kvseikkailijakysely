@@ -350,9 +350,33 @@ const app = {
         document.getElementById('progress-fill').style.width = '100%';
         const winnerKey = this.calculateWinner();
         
-        // Redirect to result URL for analytics tracking
-        const currentUrl = window.location.origin + window.location.pathname;
-        window.location.href = `${currentUrl}?char=${winnerKey}`;
+        // Update URL without reloading the page
+        const newUrl = window.location.pathname + '?char=' + winnerKey;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        
+        // Manually trigger Counter.dev analytics if available
+        this.trackResult(winnerKey);
+
+        this.showResult(winnerKey);
+    },
+
+    trackResult: function(charKey) {
+        console.log("Tracking result for:", charKey);
+        try {
+            // Some versions of counter.dev track automatically on pushState, 
+            // but we can force it by re-triggering the script or using their API
+            if (window.counterdev && typeof window.counterdev.track === 'function') {
+                window.counterdev.track(window.location.pathname + window.location.search);
+            } else {
+                // Fail-safe: Re-inject the script tag to force a page view record
+                const oldScript = document.querySelector('script[src*="counter.dev"]');
+                if (oldScript) {
+                    const newScript = document.createElement('script');
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                }
+            }
+        } catch (e) { console.warn("Analytics track failed", e); }
     },
 
     calculateWinner: function() {
