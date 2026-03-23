@@ -55,15 +55,22 @@ body.result-page {
 }
 
 .header-scene {
-    height: 42%;
-    min-height: 350px;
+    height: 30%; /* Compact for quiz */
+    min-height: 220px;
     position: relative;
     overflow: visible; /* Allow character to break out */
     background: #87ceeb; /* Sky blue */
     background-image: linear-gradient(to bottom, #87ceeb 0%, #e0f7fa 100%);
-    border-bottom: 12px solid #68d391; /* Grass green border */
+    border-bottom: 8px solid #68d391; /* Grass green border */
     flex-shrink: 0;
     border-radius: 36px 36px 0 0; /* Corner radius when overflow:visible */
+}
+
+/* Restore Result Page Header */
+.result-page .header-scene {
+    height: 42%;
+    min-height: 350px;
+    border-bottom-width: 12px;
 }
 
 .scene-bg {
@@ -131,18 +138,18 @@ body.result-page {
 }
 
 .character-container { 
-    width: 180px; height: 180px; 
-    position: absolute; bottom: 25px; left: 20%; 
+    width: 130px; height: 130px; 
+    position: absolute; bottom: 15px; left: 20%; 
     z-index: 40; /* Above content area (30) */
     transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); 
     pointer-events: none;
 }
 
 .character-container.result-mode {
-    width: 350px; height: 500px; /* High container to fit all characters properly */
+    width: 350px; height: 500px; /* Restored original height */
     left: 50%;
     transform: translateX(-50%) !important;
-    bottom: -100px; /* Fixed ground level */
+    bottom: -100px; /* Restored original ground level */
     display: flex;
     justify-content: center;
     align-items: flex-end; /* All images sit on the same bottom line */
@@ -159,7 +166,7 @@ body.result-page {
 }
 
 .content-area {
-    padding: 140px 80px 50px; /* Text starts 140px below the container's bottom edge */
+    padding: 30px 60px 20px; /* Compact for quiz */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -168,8 +175,14 @@ body.result-page {
     background: white;
     z-index: 30;
     border-radius: 40px 40px 0 0;
-    margin-top: -45px;
+    margin-top: -30px;
     position: relative;
+}
+
+/* Restore Result Page Padding */
+.result-page .content-area {
+    padding: 140px 80px 50px;
+    margin-top: -45px;
 }
 
 /* Dynamic result view padding */
@@ -178,9 +191,9 @@ body.result-page {
 }
 
 /* Kysymys: Verdana, lihava */
-h1 { font-size: 32px; font-weight: bold; color: var(--oph-dark-blue); margin: 15px 0; line-height: 1.2; }
-h2 { font-size: 18px; color: var(--oph-magenta); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-weight: bold; }
-p { font-size: 20px; line-height: 1.6; color: var(--text-dark); margin-bottom: 30px; }
+h1 { font-size: 28px; font-weight: bold; color: var(--oph-dark-blue); margin: 10px 0; line-height: 1.2; }
+h2 { font-size: 16px; color: var(--oph-magenta); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px; font-weight: bold; }
+p { font-size: 18px; line-height: 1.5; color: var(--text-dark); margin-bottom: 20px; }
 
 /* Linkit mustaksi */
 .result-extra a {
@@ -230,23 +243,23 @@ p { font-size: 20px; line-height: 1.6; color: var(--text-dark); margin-bottom: 3
 /* LOGO GRID */
 .logo-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
     align-items: center;
     justify-items: center;
 }
 .logo-grid img {
     max-width: 100%;
     height: auto;
-    max-height: 60px;
+    max-height: 45px;
     object-fit: contain;
 }
 .logo-grid img:nth-last-child(-n+2) {
-    max-height: 75px;
+    max-height: 55px;
 }
 
-.progress-bar-bg { width: 100%; background: #eef2f3; height: 12px; border-radius: 10px; margin-bottom: 40px; overflow: hidden; border: 1px solid #d1d9da; }
+.progress-bar-bg { width: 100%; background: #eef2f3; height: 10px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; border: 1px solid #d1d9da; }
 .progress-fill { height: 100%; background: linear-gradient(90deg, var(--oph-magenta) 0%, var(--oph-orange-yellow) 100%); width: 0%; transition: width 0.6s ease; }
 
 .view { display: none; width: 100%; }
