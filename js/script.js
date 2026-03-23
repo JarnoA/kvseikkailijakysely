@@ -249,6 +249,13 @@ const app = {
         else this.state.lang = 'fi';
         
         console.log("App Initialized. Language:", this.state.lang);
+
+        // Check for result in URL (for analytics and sharing)
+        const urlParams = new URLSearchParams(window.location.search);
+        const sharedChar = urlParams.get('char');
+        if (sharedChar && quizData[this.state.lang].characters[sharedChar]) {
+            setTimeout(() => { this.showResult(sharedChar); }, 100);
+        }
     },
 
     startQuiz: function() {
@@ -342,7 +349,10 @@ const app = {
     finishQuiz: function() {
         document.getElementById('progress-fill').style.width = '100%';
         const winnerKey = this.calculateWinner();
-        this.showResult(winnerKey);
+        
+        // Redirect to result URL for analytics tracking
+        const currentUrl = window.location.origin + window.location.pathname;
+        window.location.href = `${currentUrl}?char=${winnerKey}`;
     },
 
     calculateWinner: function() {
@@ -399,13 +409,6 @@ const app = {
             }
             charImg.src = charData.image;
             charImg.style.display = 'block';
-        }
-
-        // Virtual page view for analytics
-        try {
-            window.location.hash = 'tulos-' + charKey;
-        } catch (e) {
-            console.warn("Analytics hash failed:", e);
         }
         
         try {
