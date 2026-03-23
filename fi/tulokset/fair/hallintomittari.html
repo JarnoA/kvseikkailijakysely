@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olet Hallintomittari!</title>
+    <meta property="og:title" content="Olen Hallintomittari! Mikä seikkailija sinä olet?">
+    <meta property="og:description" content="Mittailet maailmaa omalta paikaltasi. Tee testi ja selvitä oma hahmosi!">
+    <meta property="og:image" content="https://kvseikkailijakysely.fi/assets/images/hallintomittari.png">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script src="https://cdn.counter.dev/script.js" data-id="4dd6d014-e826-4cda-8265-b742387017fc" data-utcoffset="2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="result-page char-hallintomittari">
+    <div class="app-container">
+        <div class="header-scene">
+            <div class="scene-ui"></div>
+            <div class="scene-bg">
+                <div class="sun" id="sun"></div>
+                <div class="layer layer-back" id="clouds"></div>
+                <div class="layer layer-mid" id="mountains-back"></div>
+                <div class="layer layer-front" id="mountains-mid"></div>
+            </div>
+            <div class="character-container result-mode">
+                <img src="../../../assets/images/hallintomittari.png" class="character-img" alt="Character">
+            </div>
+        </div>
+        <div class="content-area">
+            <h2>Tuloksesi:</h2>
+            <h1>Olet Hallintomittari!</h1>
+            <p>Mittailet maailmaa omalta paikaltasi ja huomaat helposti, missä apuasi tarvitaan. Lennähdät elegantisti manuaalista raportointilomakkeelle. Oletkin tärkeä osanen populaatiosi toiminnassa, sillä ilman sinua eivät pyörät pyörisi tai ideat löytäisi maaliin saakka.</p>
+            <p class="illustration-credit">Kuvitus: Minttu Nurmi</p>
+            
+            <div class="qr-section" style="text-align: center; margin: 10px 0 30px 0; padding: 20px; background: rgba(255,255,255,0.5); border-radius: 15px;">
+                <p style="margin-bottom: 15px; font-weight: bold; color: #006699;">Skannaa QR-koodi ja ota tulos talteen!</p>
+                <div id="qr-code-container" style="display: flex; justify-content: center;"></div>
+            </div>
+
+            <div class="result-extra">
+                <h3>Lisätietoa:</h3>
+                <p>Tutustu ainakin näihin: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisoalalle-hakuajat-ja-neuvonnat' target='_blank'>Hakuneuvonnat Erasmus+ -hankkeille</a> ja <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukkojen-hakuajat-ja-neuvonnat' target='_blank'>Euroopan solidaarisuusjoukot -hankkeille</a>, <a href='https://www.oph.fi/fi/ohjelmat/kansainvaliset-koulutukset-nuorisoalan-toimijoille' target='_blank'>kansainväliset koulutukset</a>.</p>
+            </div>
+
+            <a href="../../index.html" class="btn">Aloita alusta</a>
+            
+            <div class="logo-grid">
+                <img src="../../../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="EDUFI">
+                <img src="../../../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
+                <img src="../../../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                <img src="../../../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
+            </div>
+        </div>
+        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <a href="../../../tietosuoja.html" style="color: #666; text-decoration: none; font-size: 14px;">Tietosuojaseloste</a> | 
+            <a href="../../../fi/saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Saavutettavuusseloste</a>
+        </footer>
+    </div>
+    <script>
+        window.onload = function() {
+            const resultUrl = "https://kvseikkailijakysely.fi/fi/tulokset/hallintomittari.html";
+            new QRCode(document.getElementById("qr-code-container"), {
+                text: resultUrl,
+                width: 160,
+                height: 160,
+                colorDark : "#006699",
+                colorLight : "#ffffff",
+                correctLevel : 2 // H level
+            });
+        };
+    </script>
+</body>
+</html>

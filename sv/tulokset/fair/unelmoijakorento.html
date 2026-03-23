@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du är en Drömmarslända!</title>
+    <meta property="og:title" content="Jag är en Drömmarslända! Vilken äventyrare är du?">
+    <meta property="og:description" content="Dina ögon har öppnats för orättvisorna i världen. Gör testet och ta reda på vilken karaktär du är!">
+    <meta property="og:image" content="https://kvseikkailijakysely.fi/assets/images/unelmoijakorento.png">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <script src="https://cdn.counter.dev/script.js" data-id="4dd6d014-e826-4cda-8265-b742387017fc" data-utcoffset="2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="result-page char-unelmoijakorento">
+    <div class="app-container">
+        <div class="header-scene">
+            <div class="scene-ui"></div>
+            <div class="scene-bg">
+                <div class="sun" id="sun"></div>
+                <div class="layer layer-back" id="clouds"></div>
+                <div class="layer layer-mid" id="mountains-back"></div>
+                <div class="layer layer-front" id="mountains-mid"></div>
+            </div>
+            <div class="character-container result-mode">
+                <img src="../../../assets/images/unelmoijakorento.png" class="character-img" alt="Character">
+            </div>
+        </div>
+        <div class="content-area">
+            <h2>Ditt resultat:</h2>
+            <h1>Du är en Drömmarslända!</h1>
+            <p>Dina ögon har öppnats för orättvisorna i världen, och du vill rätta till det som är fel. Du är medveten om din litenhet, men låter den inte hindra dig från att drömma om förändring. Du samlas med andra för att göra er röst starkare. Världens ojämlikhet tynger dina vingar, men samtidigt har du förmågan att föreställa dig en bättre framtid.</p>
+            <p class="illustration-credit">Bild: Minttu Nurmi</p>
+            
+            <div class="qr-section" style="text-align: center; margin: 10px 0 30px 0; padding: 20px; background: rgba(255,255,255,0.5); border-radius: 15px;">
+                <p style="margin-bottom: 15px; font-weight: bold; color: #006699;">Skanna QR-koden och spara ditt resultat!</p>
+                <div id="qr-code-container" style="display: flex; justify-content: center;"></div>
+            </div>
+
+            <div class="result-extra">
+                <h3>Mer information:</h3>
+                <p>Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-solidaritetsprojekt' target='_blank'>Europeiska solidaritetskårens solidaritetsprojekt</a> och <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-volontarverksamhet' target='_blank'>volontärprojekt</a> samt <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank'>internationella utbildningar</a>.</p>
+            </div>
+
+            <a href="../../index.html" class="btn">Börja om</a>
+            
+            <div class="logo-grid">
+                <img src="../../../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="EDUFI">
+                <img src="../../../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
+                <img src="../../../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                <img src="../../../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
+            </div>
+        </div>
+        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <a href="../../../sv/tietosuoja.html" style="color: #666; text-decoration: none; font-size: 14px;">Integritetspolicy</a> | 
+            <a href="../../../sv/saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Tillgänglighetsutlåtande</a>
+        </footer>
+    </div>
+    <script>
+        window.onload = function() {
+            const resultUrl = "https://kvseikkailijakysely.fi/sv/tulokset/unelmoijakorento.html";
+            new QRCode(document.getElementById("qr-code-container"), {
+                text: resultUrl,
+                width: 160,
+                height: 160,
+                colorDark : "#006699",
+                colorLight : "#ffffff",
+                correctLevel : 2 // H level
+            });
+        };
+    </script>
+</body>
+</html>

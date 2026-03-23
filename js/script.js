@@ -350,16 +350,10 @@ const app = {
         document.getElementById('progress-fill').style.width = '100%';
         const winnerKey = this.calculateWinner();
         
-        // 1. Update URL visually without reloading
-        const newUrl = window.location.pathname + '?char=' + winnerKey;
-        window.history.pushState({}, '', newUrl);
-        
-        // 2. Manual tracking for Counter.dev (as suggested)
-        if (window.counterdev && typeof window.counterdev.track === 'function') {
-            window.counterdev.track(window.location.pathname + window.location.search);
-        }
-
-        this.showResult(winnerKey);
+        // Redirect to the "fair" version of the result page for accurate analytics
+        // This version includes the QR code for users to scan on their phones.
+        const fairUrl = `tulokset/fair/${winnerKey}.html`;
+        window.location.href = fairUrl;
     },
 
     calculateWinner: function() {
