@@ -166,7 +166,7 @@ const quizData = {
             },
             'kehittajakehraaja': {
                 title: "Du är en Idéspinnare!",
-                desc: "Du vet vart du är på väg, även om du ännu inte ser hela vägen. Du får också andra att pröva på sådant som ännu inte är möjligt. När du rör dig mot nya nätverk drömmer du om begrepp och metoder, seminarier, påverkan på beslutsfattare och om att föra samman olika perspektiv. Du spinner vidare projektidéer till lösningar på de problem du möter.",
+                desc: "Du vet vart du är på väg, även om du ännu inte ser hela vägen. Du får också andra että pröva på sådant som ännu inte är möjligt. När du rör dig mot nya nätverk drömmer du om begrepp och metoder, seminarier, påverkan på beslutsfattare och om att föra samman olika perspektiv. Du spinner vidare projektidéer till lösningar på de problem du möter.",
                 info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/erasmus-ungdomssektorn-partnerskap-samarbete' target='_blank'>Erasmus+ partnerskap för samarbete</a> och <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank'>internationella utbildningar</a>.",
                 image: "../assets/images/kehittajakehraaja.png",
                 rank: 2
@@ -187,14 +187,14 @@ const quizData = {
             },
             'rohkaisijakuoriainen': {
                 title: "Du är en Uppmuntrarbagge!",
-                desc: "Du ser till att alla känner sig hörda och sedda. Du är redo att hjälpa till i alla situationer. Du viskar uppmuntrande ord och känner till de vägar och möjligheter som ligger framför. Du ger dem omkring dig, både unga och kollegor, mod att bre ut sina vingar inför det nya!",
+                desc: "Du ser till että alla känner sig hörda och sedda. Du är redo että hjälpa till i alla situationer. Du viskar uppmuntrande ord och känner till de vägar och möjligheter som ligger framför. Du ger dem omkring dig, både unga och kollegor, mod että bre ut sina vingar inför det nya!",
                 info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/internationalisering/eurodesk' target='_blank'>Eurodesk-nätverket för ungdomsinformation</a>, <a href='https://www.oph.fi/sv/program/erasmus-ungdomsverksamhet' target='_blank'>Erasmus+ ungdomsverksamhet</a> ja <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-solidaritetsprojekt' target='_blank'>Europeiska solidaritetskårens solidaritetsprojekt</a>.",
                 image: "../assets/images/rohkaisijakuoriainen.png",
                 rank: 5
             },
             'osallisuuskimalainen': {
                 title: "Du är ett Delaktighetsbi!",
-                desc: "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Du har tagit som din uppgift att se till att varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller så tar du målmedvetet reda på det.",
+                desc: "Du surrar av iver när unga hittar nya sätt että göra sin egen röst hörd. Du har tagit som din uppgift että se till että varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller så tar du målmedvetet reda på det.",
                 info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-volontarverksamhet' target='_blank'>Europeiska solidaritetskårens volontärprojekt</a> och <a href='https://www.oph.fi/sv/program/erasmus-ungdomsutbyte' target='_blank'>Erasmus+ ungdomsutbyten</a>.",
                 image: "../assets/images/osallisuuskimalainen.png",
                 rank: 6
@@ -205,13 +205,13 @@ const quizData = {
                 { text: "Jag deltar i en demonstration eller annan synlig påverkan.", scores: { 'unelmoijakorento': 3, 'osallisuuskimalainen': 3 } },
                 { text: "Jag skriver en skriftlig ansökan, ett ställningstagande eller respons till beslutsfattarna.", scores: { 'kehittajakehraaja': 3, 'hallintomittari': 3 } },
                 { text: "Jag arbetar ute på fältet med unga och organiserar verksamhet tillsammans med dem.", scores: { 'seikkailijasirkka': 3 } },
-                { text: "Jag börjar med att lyssna på andras tankar och erfarenheter i frågan.", scores: { 'rohkaisijakuoriainen': 3 } }
+                { text: "Jag börjar med että lyssna på andras tankar och erfarenheter i frågan.", scores: { 'rohkaisijakuoriainen': 3 } }
             ]},
-            { text: "Vilket av följande tycker du mest om att göra?", options: [
+            { text: "Vilket av följande tycker du mest om että göra?", options: [
                 { text: "Att se hur någon vågar göra något nytt.", scores: { 'rohkaisijakuoriainen': 2, 'osallisuuskimalainen': 2 } },
                 { text: "Att vandra på gatorna i en ny stad tillsammans med andra.", scores: { 'seikkailijasirkka': 2, 'unelmoijakorento': 2 } },
                 { text: "Att lösa ett verkligt problem med hjälp av smidig excel-användning.", scores: { 'hallintomittari': 2 } },
-                { text: "Att dela idéer ja erfarenheter med nya bekantskaper för att skapa något helt nytt.", scores: { 'kehittajakehraaja': 2 } }
+                { text: "Att dela idéer ja erfarenheter med nya bekantskaper för että skapa något helt nytt.", scores: { 'kehittajakehraaja': 2 } }
             ]},
             { text: "Ni arbetar med ett gemensamt projekt i en liten grupp. Vilken roll passar dig bäst?", options: [
                 { text: "Jag är en bakgrundspåverkare som sköter mitt eget delområde.", scores: { 'hallintomittari': 2 } },
@@ -229,7 +229,7 @@ const quizData = {
                 { text: "Nöden är uppfinningarnas moder.", scores: { 'osallisuuskimalainen': 1, 'seikkailijasirkka': 1 } },
                 { text: "Man överger inte en kamrat.", scores: { 'rohkaisijakuoriainen': 1 } },
                 { text: "Välplanerat är hälften gjort.", scores: { 'hallintomittari': 1 } },
-                { text: "Det är bäst att sova på saken.", scores: { 'unelmoijakorento': 1, 'kehittajakehraaja': 1 } }
+                { text: "Det är bäst että sova på saken.", scores: { 'unelmoijakorento': 1, 'kehittajakehraaja': 1 } }
             ]}
         ]
     }
@@ -350,33 +350,16 @@ const app = {
         document.getElementById('progress-fill').style.width = '100%';
         const winnerKey = this.calculateWinner();
         
-        // Update URL without reloading the page
+        // 1. Update URL visually without reloading
         const newUrl = window.location.pathname + '?char=' + winnerKey;
-        window.history.pushState({ path: newUrl }, '', newUrl);
+        window.history.pushState({}, '', newUrl);
         
-        // Manually trigger Counter.dev analytics if available
-        this.trackResult(winnerKey);
+        // 2. Manual tracking for Counter.dev (as suggested)
+        if (window.counterdev && typeof window.counterdev.track === 'function') {
+            window.counterdev.track(window.location.pathname + window.location.search);
+        }
 
         this.showResult(winnerKey);
-    },
-
-    trackResult: function(charKey) {
-        console.log("Tracking result for:", charKey);
-        try {
-            // Some versions of counter.dev track automatically on pushState, 
-            // but we can force it by re-triggering the script or using their API
-            if (window.counterdev && typeof window.counterdev.track === 'function') {
-                window.counterdev.track(window.location.pathname + window.location.search);
-            } else {
-                // Fail-safe: Re-inject the script tag to force a page view record
-                const oldScript = document.querySelector('script[src*="counter.dev"]');
-                if (oldScript) {
-                    const newScript = document.createElement('script');
-                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                    oldScript.parentNode.replaceChild(newScript, oldScript);
-                }
-            }
-        } catch (e) { console.warn("Analytics track failed", e); }
     },
 
     calculateWinner: function() {
