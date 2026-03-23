@@ -286,7 +286,7 @@ const app = {
         const mountBack = document.getElementById('mountains-back');
         const mountMid = document.getElementById('mountains-mid');
 
-        let charPos = 20 + (this.state.currentStep * 12); 
+        let charPos = 15 + (this.state.currentStep * 15); 
         let cloudPos = this.state.currentStep * 30;
         let mountBackPos = this.state.currentStep * -40; 
         let mountMidPos = this.state.currentStep * -100; 
@@ -375,6 +375,11 @@ const app = {
 
         document.getElementById('result-title').innerText = charData.title;
         document.getElementById('result-desc').innerText = charData.desc;
+        
+        const illuLabel = (this.state.lang === 'en') ? 'Illustration by:' : (this.state.lang === 'sv' ? 'Bild:' : 'Kuvitus:');
+        const illuEl = document.getElementById('result-illustration');
+        if (illuEl) illuEl.innerText = `${illuLabel} Minttu Nurmi`;
+        
         document.getElementById('result-info').innerHTML = charData.info;
         
         const charContainer = document.getElementById('avatar-container');
