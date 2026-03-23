@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What kind of adventurer are you?</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.counter.dev/script.js" data-id="4dd6d014-e826-4cda-8265-b742387017fc" data-utcoffset="2"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div class="header-scene" id="scene-bg">
+            <div class="scene-ui">
+                <nav class="lang-switcher">
+                    <a href="../fi/index.html" class="lang-link">FI</a>
+                    <a href="index.html" class="lang-link active">EN</a>
+                    <a href="../sv/index.html" class="lang-link">SV</a>
+                </nav>
+            </div>
+
+            <div class="scene-bg">
+                <div class="sun" id="sun"></div>
+                <div class="layer layer-back" id="mountains-back"></div>
+                <div class="layer layer-mid" id="mountains-mid"></div>
+            </div>
+
+            <div class="character-container" id="avatar-container">
+                <!-- Mystery Bug Silhouette -->
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="character-img" id="avatar-svg">
+                  <g fill="#154194" fill-opacity="0.5">
+                    <path d="M100,80 C60,40 20,60 10,90 C10,110 50,110 100,95 Z" />
+                    <path d="M100,80 C140,40 180,60 190,90 C190,110 150,110 100,95 Z" />
+                    <path d="M100,100 C70,110 30,130 40,150 C50,165 90,140 100,115 Z" />
+                    <path d="M100,100 C130,110 170,130 160,150 C150,165 110,140 100,115 Z" />
+                  </g>
+                  <path d="M100,50 C115,50 120,70 120,90 C120,130 115,160 100,160 C85,160 80,130 80,90 C80,70 85,50 100,50 Z" fill="#154194" />
+                  <circle cx="100" cy="40" r="15" fill="#154194" />
+                  <g stroke="#154194" stroke-linecap="round" fill="none" stroke-width="2">
+                    <path id="antenna-l" d="M90,30 C75,10 60,15 55,25" style="transition: transform 0.5s ease; transform-origin: 90px 30px;" />
+                    <path id="antenna-r" d="M110,30 C125,10 140,15 145,25" style="transition: transform 0.5s ease; transform-origin: 110px 30px;" />
+                  </g>
+                  <g stroke="#154194" stroke-linecap="round" fill="none" stroke-width="4">
+                    <path d="M85,75 L60,60 L55,70" />
+                    <path d="M115,75 L140,60 L145,70" />
+                    <path d="M82,95 L65,115 L70,125" />
+                    <path d="M118,95 L135,115 L130,125" />
+                  </g>
+                  <g stroke="#154194" stroke-linecap="round" fill="none" stroke-width="5">
+                    <path d="M90,150 L85,185 L75,190" />
+                    <path d="M110,150 L115,185 L125,190" />
+                  </g>
+                  <text x="100" y="48" text-anchor="middle" font-family="Verdana" font-weight="bold" font-size="22" fill="#ffcc00">?</text>
+                </svg>
+            </div>
+        </div>
+
+        <div class="content-area">
+            
+            <div id="view-start" class="view active">
+                <h2>Adventurer Quiz</h2>
+                <h1>What kind of international youth work adventurer are you?</h1>
+                <p>The journey starts here. Answer the questions and discover your role!</p>
+                <button class="btn" onclick="app.startQuiz()">Start journey</button>
+            </div>
+
+            <div id="view-question" class="view">
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <h2 id="question-counter">Stage 1 / 5</h2>
+                <h1 id="question-text">Loading question...</h1>
+                <div id="options-container"></div>
+            </div>
+
+            <div id="view-result" class="view">
+                <div class="result-card">
+                    <h2 id="result-label">Your result:</h2>
+                    <h1 id="result-title">Character</h1>
+                    <p id="result-desc">Description...</p>
+                    
+                    <div class="result-extra">
+                        <h3>More information:</h3>
+                        <p id="result-info">...</p>
+                    </div>
+
+                    <div class="qr-container" id="qr-code-container"></div>
+                    <button class="btn" onclick="app.restart()">Start over ↻</button>
+
+                    <div class="logo-grid">
+                        <img src="../assets/images/OPH_En_vaaka_rgb.png" alt="EDUFI">
+                        <img src="../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
+                        <img src="../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                        <img src="../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <a href="tietosuoja.html" style="color: #666; text-decoration: none; font-size: 14px;">Privacy Policy</a> | 
+            <a href="saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Accessibility Statement</a>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

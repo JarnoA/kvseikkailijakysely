@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Statement - Adventurer Quiz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .app-container {
+            max-height: none !important;
+            height: auto !important;
+        }
+        .content-area {
+            overflow-y: visible !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+        }
+        body {
+            align-items: flex-start !important;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="header-scene" style="min-height: 200px; height: 200px;">
+            <div class="scene-ui">
+                <img src="../assets/images/OPH_En_vaaka_rgb.png" alt="EDUFI" class="logo">
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div style="text-align: left; width: 100%;">
+                <a href="javascript:history.back()" class="btn btn-outline" style="width: auto; display: inline-flex; padding: 10px 20px; font-size: 16px; margin-bottom: 30px;">← Back</a>
+                
+                <h1>Accessibility Statement</h1>
+                <p><strong>Updated:</strong> 16.3.2026</p>
+                
+                <p>This accessibility statement applies to the website kvseikkailijakysely.fi. The website is subject to the Act on the Provision of Digital Services, which requires that public web services must be accessible.</p>
+
+                <h2>Preparation of the statement</h2>
+                <p>This statement was prepared based on self-assessment on 16.3.2026. The evaluation has taken into account the technical implementation and user interface of the quiz application.</p>
+
+                <h2>1. Status of accessibility of the digital service</h2>
+                <p>This web service partially meets the accessibility requirements set by law (WCAG 2.1, level AA) due to the deficiencies mentioned below.</p>
+
+                <h2>2. Non-accessible content</h2>
+                <p>The following accessibility deficiencies have been observed in the service, which we aim to correct or for which an alternative method is provided:</p>
+                
+                <ul>
+                    <li><strong>Use of QR code on the result page (WCAG 1.1.1 Non-text Content):</strong> On the test result page (for event use), a QR code is used to share the result. Reading the QR code requires vision and the use of another device, and it is not as such accessible to screen reader users. <em>Alternative method:</em> In addition to the QR code, the result page has text-based and screen reader accessible buttons ("Take the test yourself" or social media sharing buttons) that serve the same purpose without scanning a QR code.</li>
+                    <li><strong>Dynamic view transitions (WCAG 4.1.2 Name, Role, Value / WCAG 2.4.3 Focus Order):</strong> The quiz is implemented as a dynamic application where the transition from one question to another occurs without reloading the page. In keyboard and screen reader use, there may be delays or inaccuracies in the focus transition to a new question with certain browser and screen reader combinations.</li>
+                    <li><strong>Text alternatives for character illustrations (WCAG 1.1.1 Non-text Content):</strong> The illustrations used on the result page may contain visual details that are not perfectly described in the alt texts, although the result itself (character name and description) can be read as text.</li>
+                </ul>
+
+                <h2>3. Feedback and contact information</h2>
+                <p>Did you notice an accessibility deficiency in our digital service? Let us know and we will do our best to correct it.</p>
+                <p>Email: <a href="mailto:kirjaamo@oph.fi">kirjaamo@oph.fi</a></p>
+
+                <h2>4. Enforcement procedure</h2>
+                <p>If you notice accessibility problems on the site, first provide feedback to the site administrator (Finnish National Agency for Education). It may take 14 days to receive a reply. If you are not satisfied with the answer you received or do not receive a reply at all, you can make a report to the Regional State Administrative Agency for Southern Finland.</p>
+                
+                <p><strong>Contact information of the supervisory authority:</strong><br>
+                Regional State Administrative Agency for Southern Finland<br>
+                Accessibility Supervision Unit<br>
+                <a href="https://www.saavutettavuusvaatimukset.fi">www.saavutettavuusvaatimukset.fi</a><br>
+                <a href="mailto:saavutettavuus@avi.fi">saavutettavuus(at)avi.fi</a></p>
+                
+                <br>
+                <a href="index.html" class="btn btn-primary">Return to home page</a>
+            </div>
+        </main>
+
+        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <p style="font-size: 14px; color: #666;">© Finnish National Agency for Education 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>

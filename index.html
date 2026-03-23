@@ -1,117 +1,14 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minkälainen seikkailija olet?</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://cdn.counter.dev/script.js" data-id="4dd6d014-e826-4cda-8265-b742387017fc" data-utcoffset="2"></script>
+    <meta http-equiv="refresh" content="0; url=fi/">
+    <script type="text/javascript">
+        window.location.href = "fi/"
+    </script>
+    <title>Uudelleenohjataan...</title>
 </head>
 <body>
-
-    <div class="app-container">
-        
-        <div class="header-scene" id="scene-bg">
-            <div class="scene-ui">
-                <nav class="lang-switcher">
-                    <a href="index.html" class="lang-link active">FI</a>
-                    <a href="../en/index.html" class="lang-link">EN</a>
-                    <a href="../sv/index.html" class="lang-link">SV</a>
-                </nav>
-            </div>
-
-            <div class="scene-bg">
-                <div class="sun" id="sun"></div>
-                <div class="layer layer-back" id="clouds"></div>
-                <div class="layer layer-mid" id="mountains-back"></div>
-                <div class="layer layer-front" id="mountains-mid"></div>
-            </div>
-
-            <div class="character-container" id="avatar-container">
-                <!-- Indiana Jones Pupu SVG (alkuperäisestä demosta) -->
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="character-img" id="avatar-svg">
-                    <!-- Reppu -->
-                    <rect x="20" y="55" width="25" height="28" rx="6" fill="#795548"/>
-                    <path d="M20 55 L45 55 L40 50 L25 50 Z" fill="#5D4037"/>
-                    
-                    <g id="bunny-body">
-                        <!-- Keho -->
-                        <path d="M40 70 C40 70 35 88 45 92 L75 92 C80 88 80 70 80 70 L40 70Z" fill="#E0E0E0"/>
-                        <path d="M45 55 C45 42 52 35 65 35 C78 35 85 42 85 55 C85 65 78 72 65 72 C52 72 45 65 45 55Z" fill="#E0E0E0"/>
-                        <!-- Korvat -->
-                        <ellipse cx="55" cy="25" rx="6" ry="18" transform="rotate(-15 55 25)" fill="#E0E0E0"/>
-                        <ellipse cx="55" cy="25" rx="3" ry="12" transform="rotate(-15 55 25)" fill="#FFD1DC"/>
-                        <ellipse cx="75" cy="25" rx="6" ry="18" transform="rotate(15 75 25)" fill="#E0E0E0"/>
-                        <ellipse cx="75" cy="25" rx="3" ry="12" transform="rotate(15 75 25)" fill="#FFD1DC"/>
-                        <!-- Naama -->
-                        <ellipse cx="65" cy="58" rx="9" ry="7" fill="white"/>
-                        <path d="M62 57 L68 57 L65 61 Z" fill="#FF8A80"/>
-                        <path d="M61 63 Q65 67 69 63" stroke="#333" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                        <!-- Silmät -->
-                        <circle cx="58" cy="48" r="3" fill="#333"/>
-                        <circle cx="72" cy="48" r="3" fill="#333"/>
-                    </g>
-                    
-                    <!-- Hattu (Indiana Jones tyyli) -->
-                    <g id="hat">
-                        <ellipse cx="65" cy="38" rx="25" ry="6" fill="#D84315"/>
-                        <path d="M50 38 C50 38 52 20 65 20 C78 20 80 38 80 38" fill="#BF360C"/>
-                        <rect x="52" y="34" width="26" height="4" fill="#3E2723"/>
-                    </g>
-                </svg>
-            </div>
-        </div>
-
-        <div class="content-area">
-            
-            <div id="view-start" class="view active">
-                <h2>Seikkailijatesti</h2>
-                <h1>Minkälainen kansainvälisen nuorisotyön seikkailija olet?</h1>
-                <p>Matka alkaa tästä. Vastaa kysymyksiin ja löydä oma roolisi!</p>
-                <button class="btn" onclick="app.startQuiz()">Aloita matka</button>
-            </div>
-
-            <div id="view-question" class="view">
-                <div class="progress-bar-bg">
-                    <div class="progress-fill" id="progress-fill"></div>
-                </div>
-                <h2 id="question-counter">Etappi 1 / 5</h2>
-                <h1 id="question-text">Kysymys latautuu...</h1>
-                <div id="options-container"></div>
-            </div>
-
-            <div id="view-result" class="view">
-                <div class="result-card">
-                    <h2 id="result-label">Tuloksesi:</h2>
-                    <h1 id="result-title">Hahmo</h1>
-                    <p id="result-desc">Kuvaus...</p>
-                    
-                    <div class="result-extra">
-                        <h3>Lisätietoa:</h3>
-                        <p id="result-info">...</p>
-                    </div>
-
-                    <div class="qr-container" id="qr-code-container"></div>
-                    <button class="btn" onclick="app.restart()">Aloita alusta ↻</button>
-                    
-                    <div class="logo-grid">
-                        <img src="../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="OPH">
-                        <img src="../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
-                        <img src="../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
-                        <img src="../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
-            <a href="../tietosuoja.html" style="color: #666; text-decoration: none; font-size: 14px;">Tietosuojaseloste</a> | 
-            <a href="saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Saavutettavuusseloste</a>
-        </footer>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="../js/script.js"></script>
+    Jos sivu ei lataudu, <a href="fi/">klikkaa tästä</a>.
 </body>
 </html>

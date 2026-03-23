@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saavutettavuusseloste - KV-Hahmokysely</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .app-container {
+            max-height: none !important;
+            height: auto !important;
+        }
+        .content-area {
+            overflow-y: visible !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+        }
+        body {
+            align-items: flex-start !important;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="header-scene" style="min-height: 200px; height: 200px;">
+            <div class="scene-ui">
+                <img src="../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="OPH" class="logo">
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div style="text-align: left; width: 100%;">
+                <a href="javascript:history.back()" class="btn btn-outline" style="width: auto; display: inline-flex; padding: 10px 20px; font-size: 16px; margin-bottom: 30px;">← Takaisin</a>
+                
+                <h1>Saavutettavuusseloste</h1>
+                <p><strong>Päivitetty:</strong> 16.3.2026</p>
+                
+                <p>Tämä saavutettavuusseloste koskee sivustoa kvseikkailijakysely.fi. Sivustoa koskee laki digitaalisten palvelujen tarjoamisesta, joka edellyttää, että julkisten verkkopalvelujen on oltava saavutettavia.</p>
+
+                <h2>Selosteen laatiminen</h2>
+                <p>Tämä seloste on laadittu itsearvioinnin perusteella 16.3.2026. Arvioinnissa on huomioitu kyselysovelluksen tekninen toteutus ja käyttöliittymä.</p>
+
+                <h2>1. Digitaalisen palvelun saavutettavuuden tila</h2>
+                <p>Tämä verkkopalvelu täyttää lain asettamat saavutettavuusvaatimukset (WCAG 2.1, taso AA) osittain johtuen jäljempänä mainituista puutteista.</p>
+
+                <h2>2. Ei-saavutettava sisältö</h2>
+                <p>Palvelussa on havaittu seuraavia saavutettavuuspuutteita, jotka pyritään korjaamaan tai joiden osalta on tarjolla vaihtoehtoinen toimintatapa:</p>
+                
+                <ul>
+                    <li><strong>QR-koodin käyttö tulossivulla (WCAG 1.1.1 Ei-tekstuaalinen sisältö):</strong> Testin tulossivulla (messukäytössä) hyödynnetään tuloksen jakamiseen QR-koodia. QR-koodin lukeminen edellyttää näkökykyä ja toisen päätelaitteen käyttöä, eikä se ole sellaisenaan saavutettava ruudunlukijan käyttäjille. <em>Vaihtoehtoinen tapa:</em> Tulossivulla on QR-koodin lisäksi tekstipohjaiset ja ruudunlukijalla saavutettavat painikkeet ("Tee testi itse" tai some-jakopainikkeet), jotka ajavat saman asian ilman QR-koodin skannaamista.</li>
+                    <li><strong>Dynaamiset näkymäsiirtymät (WCAG 4.1.2 Nimi, rooli, arvo / WCAG 2.4.3 Kohdistusjärjestys):</strong> Kysely on toteutettu dynaamisena sovelluksena, jossa siirtyminen kysymyksestä toiseen tapahtuu sivua lataamatta. Näppäimistö- ja ruudunlukijakäytössä kohdistuksen (focus) siirtymisessä uuteen kysymykseen saattaa esiintyä viiveitä tai epätarkkuuksia tietyillä selain- ja ruudunlukijayhdistelmillä.</li>
+                    <li><strong>Hahmokuvitusten tekstivastineet (WCAG 1.1.1 Ei-tekstuaalinen sisältö):</strong> Tulossivulla käytettävät kuvitukset saattavat sisältää visuaalisia yksityiskohtia, joita ei ole täydellisesti kuvattu alt-teksteissä, vaikkakin itse tulos (hahmon nimi ja kuvaus) on luettavissa tekstinä.</li>
+                </ul>
+
+                <h2>3. Palaute ja yhteystiedot</h2>
+                <p>Huomasitko saavutettavuuspuutteen digitaalisessa palvelussamme? Kerro se meille ja teemme parhaamme puutteen korjaamiseksi.</p>
+                <p>Sähköposti: <a href="mailto:kirjaamo@oph.fi">kirjaamo@oph.fi</a></p>
+
+                <h2>4. Täytäntöönpanomenettely</h2>
+                <p>Jos huomaat sivustolla saavutettavuusongelmia, anna ensin palautetta sivuston ylläpitäjälle (Opetushallitus). Vastauksessa voi mennä 14 päivää. Jos et ole tyytyväinen saamaasi vastaukseen tai et saa vastausta lainkaan, voit tehdä ilmoituksen Etelä-Suomen aluehallintovirastolle.</p>
+                
+                <p><strong>Valvontaviranomaisen yhteystiedot:</strong><br>
+                Etelä-Suomen aluehallintovirasto<br>
+                Saavutettavuuden valvonnan yksikkö<br>
+                <a href="https://www.saavutettavuusvaatimukset.fi">www.saavutettavuusvaatimukset.fi</a><br>
+                <a href="mailto:saavutettavuus@avi.fi">saavutettavuus(at)avi.fi</a></p>
+                
+                <br>
+                <a href="index.html" class="btn btn-primary">Palaa etusivulle</a>
+            </div>
+        </main>
+
+        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <p style="font-size: 14px; color: #666;">© Opetushallitus 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>

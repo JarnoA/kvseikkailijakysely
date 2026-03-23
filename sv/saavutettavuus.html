@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tillgänglighetsutlåtande - Äventyrartest</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .app-container {
+            max-height: none !important;
+            height: auto !important;
+        }
+        .content-area {
+            overflow-y: visible !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+        }
+        body {
+            align-items: flex-start !important;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="header-scene" style="min-height: 200px; height: 200px;">
+            <div class="scene-ui">
+                <img src="../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="Utbildningsstyrelsen" class="logo">
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div style="text-align: left; width: 100%;">
+                <a href="javascript:history.back()" class="btn btn-outline" style="width: auto; display: inline-flex; padding: 10px 20px; font-size: 16px; margin-bottom: 30px;">← Tillbaka</a>
+                
+                <h1>Tillgänglighetsutlåtande</h1>
+                <p><strong>Uppdaterad:</strong> 16.3.2026</p>
+                
+                <p>Detta tillgänglighetsutlåtande gäller webbplatsen kvseikkailijakysely.fi. Webbplatsen omfattas av lagen om tillhandahållande av digitala tjänster, som kräver att offentliga webbtjänster ska vara tillgängliga.</p>
+
+                <h2>Upprättande av utlåtandet</h2>
+                <p>Detta utlåtande har upprättats på grundval av en självutvärdering den 16.3.2026. Vid utvärderingen har hänsyn tagits till enkätapplikationens tekniska genomförande och användargränssnitt.</p>
+
+                <h2>1. Tillståndet för den digitala tjänstens tillgänglighet</h2>
+                <p>Denna webbtjänst uppfyller delvis de tillgänglighetskrav som ställs i lag (WCAG 2.1, nivå AA) på grund av de brister som nämns nedan.</p>
+
+                <h2>2. Icke-tillgängligt innehåll</h2>
+                <p>Följande tillgänglighetsbrister har observerats i tjänsten, som vi strävar efter att korrigera eller för vilka ett alternativt tillvägagångssätt tillhandahålls:</p>
+                
+                <ul>
+                    <li><strong>Användning av QR-kod på resultatsidan (WCAG 1.1.1 Icke-textuellt innehåll):</strong> På testresultatsidan (för mässbruk) används en QR-kod för att dela resultatet. Att läsa QR-koden kräver synförmåga och användning av en annan enhet, och den är inte som sådan tillgänglig för skärmläsaranvändare. <em>Alternativt sätt:</em> Förutom QR-koden finns det på resultatsidan textbaserade knappar som är tillgängliga för skärmläsare ("Gör testet själv" eller delningsknappar för sociala medier) som tjänar samma syfte utan att skanna en QR-kod.</li>
+                    <li><strong>Dynamiska vyövergångar (WCAG 4.1.2 Namn, roll, värde / WCAG 2.4.3 Fokusordning):</strong> Enkäten är genomförd som en dynamisk applikation där övergången från en fråga till en annan sker utan att ladda om sidan. Vid tangentbords- och skärmläsaranvändning kan fördröjningar eller felaktigheter i fokusöverföringen till en ny fråga förekomma med vissa kombinationer av webbläsare och skärmläsare.</li>
+                    <li><strong>Textalternativ för karaktärsillustrationer (WCAG 1.1.1 Icke-textuellt innehåll):</strong> Illustrationerna som används på resultatsidan kan innehålla visuella detaljer som inte är perfekt beskrivna i alt-texterna, även om själva resultatet (karaktärens namn och beskrivning) kan läsas som text.</li>
+                </ul>
+
+                <h2>3. Feedback och kontaktinformation</h2>
+                <p>Har du märkt en tillgänglighetsbrist i vår digitala tjänst? Berätta det för oss så gör vi vårt bästa för att åtgärda bristen.</p>
+                <p>E-post: <a href="mailto:kirjaamo@oph.fi">kirjaamo@oph.fi</a></p>
+
+                <h2>4. Genomförandeförfarande</h2>
+                <p>Om du märker tillgänglighetsproblem på webbplatsen, ge först feedback till webbplatsens administratör (Utbildningsstyrelsen). Det kan ta 14 dagar att få svar. Om du inte är nöjd med svaret du fått eller inte får något svar alls, kan du göra en anmälan till Regionförvaltningsverket i Södra Finland.</p>
+                
+                <p><strong>Tillsynsmyndighetens kontaktinformation:</strong><br>
+                Regionförvaltningsverket i Södra Finland<br>
+                Enheten för tillsyn över tillgänglighet<br>
+                <a href="https://www.saavutettavuusvaatimukset.fi">www.saavutettavuusvaatimukset.fi</a><br>
+                <a href="mailto:saavutettavuus@avi.fi">saavutettavuus(at)avi.fi</a></p>
+                
+                <br>
+                <a href="index.html" class="btn btn-primary">Återvänd till startsidan</a>
+            </div>
+        </main>
+
+        <footer style="padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <p style="font-size: 14px; color: #666;">© Utbildningsstyrelsen 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>
