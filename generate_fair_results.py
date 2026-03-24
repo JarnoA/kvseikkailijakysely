@@ -237,7 +237,7 @@ template_fair = """<!DOCTYPE html>
     </div>
     <script>
         window.onload = function() {{
-            const resultUrl = "https://kvseikkailijakysely.fi/{lang}/tulokset/{char_key}.html";
+            var resultUrl = "https://kvseikkailijakysely.fi/{lang}/tulokset/{char_key}.html";
             new QRCode(document.getElementById("qr-code-container"), {{
                 text: resultUrl,
                 width: 160,
