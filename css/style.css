@@ -316,7 +316,18 @@ p {
 
 @media (max-width: 600px) {
     .content-area { padding: 160px 25px 30px; }
-    .character-container.result-mode { width: 220px; height: 220px; bottom: -60px; }
+    
+    /* Specific override for result pages to fix narrow text and enlarge character */
+    .result-page .content-area { 
+        padding: 130px 20px 30px; 
+    }
+    
+    .character-container.result-mode { 
+        width: 280px; 
+        height: 280px; 
+        bottom: -40px; 
+    }
+
     h1 { font-size: 24px; }
     p { font-size: 17px; }
     .btn { font-size: 18px; padding: 16px; }
