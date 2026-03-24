@@ -315,11 +315,15 @@ p {
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
 @media (max-width: 600px) {
-    .content-area { padding: 160px 25px 30px; }
+    .content-area { 
+        padding: 120px 25px 30px; 
+        margin-top: -50px; /* Pull quiz content further up over the grass border */
+    }
     
     /* Specific override for result pages to fix narrow text and enlarge character */
     .result-page .content-area { 
-        padding: 130px 20px 30px; 
+        padding: 110px 20px 30px; 
+        margin-top: -70px; /* Even deeper overlap for result pages */
     }
     
     .character-container.result-mode { 
@@ -331,6 +335,9 @@ p {
     h1 { font-size: 24px; }
     p { font-size: 17px; }
     .btn { font-size: 18px; padding: 16px; }
-    .header-scene { height: 35%; min-height: 280px; }
+    .header-scene { height: 30%; min-height: 250px; }
     .character-container { width: 110px; height: 110px; }
+
+    /* Reduce spacing for illustration credit on mobile */
+    .illustration-credit { margin-bottom: 10px; margin-top: 10px; }
 }
