@@ -24,6 +24,7 @@ body {
     justify-content: center;
     align-items: center; /* Back to center for questionnaire */
     min-height: 100vh;
+    color: #1a202c; /* Fallback */
     color: var(--text-dark);
 }
 
@@ -39,6 +40,7 @@ body.result-page {
     width: 95%;
     max-width: 850px;
     min-height: 85vh;
+    border-radius: 40px; /* Fallback */
     border-radius: var(--card-radius);
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -191,9 +193,32 @@ body.result-page {
 }
 
 /* Kysymys: Verdana, lihava */
-h1 { font-size: 28px; font-weight: bold; color: var(--oph-dark-blue); margin: 10px 0; line-height: 1.2; }
-h2 { font-size: 16px; color: var(--oph-magenta); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px; font-weight: bold; }
-p { font-size: 18px; line-height: 1.5; color: var(--text-dark); margin-bottom: 20px; }
+h1 { 
+    font-size: 28px; 
+    font-weight: bold; 
+    color: #006699; /* Fallback */
+    color: var(--oph-dark-blue); 
+    margin: 10px 0; 
+    line-height: 1.2; 
+}
+
+h2 { 
+    font-size: 16px; 
+    color: #C126B8; /* Fallback */
+    color: var(--oph-magenta); 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+p { 
+    font-size: 18px; 
+    line-height: 1.5; 
+    color: #1a202c; /* Fallback */
+    color: var(--text-dark); 
+    margin-bottom: 20px; 
+}
 
 /* Linkit mustaksi */
 .result-extra a {
@@ -204,7 +229,9 @@ p { font-size: 18px; line-height: 1.5; color: var(--text-dark); margin-bottom: 2
 
 /* NÄPPÄIMET: Verdana, lihava, keskitetty */
 .btn {
-    background: var(--oph-dark-blue); color: white; border: none;
+    background: #006699; /* Fallback */
+    background: var(--oph-dark-blue); 
+    color: white; border: none;
     padding: 20px 30px; border-radius: 60px;
     font-weight: bold; font-size: 20px;
     font-family: 'Verdana', sans-serif;
@@ -219,12 +246,16 @@ p { font-size: 18px; line-height: 1.5; color: var(--text-dark); margin-bottom: 2
 /* Vastausnapit valkoisena, hover turkoosina */
 .btn-outline { 
     background: #ffffff; 
+    border: 3px solid #66cccc; /* Fallback */
     border: 3px solid var(--oph-turquoise); 
+    color: #006699; /* Fallback */
     color: var(--oph-dark-blue); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 .btn-outline:hover { 
+    background: #66cccc; /* Fallback */
     background: var(--oph-turquoise); 
+    border-color: #66cccc; /* Fallback */
     border-color: var(--oph-turquoise);
     color: white;
 }
@@ -269,7 +300,13 @@ p { font-size: 18px; line-height: 1.5; color: var(--text-dark); margin-bottom: 2
 }
 
 .progress-bar-bg { width: 100%; background: #eef2f3; height: 10px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; border: 1px solid #d1d9da; }
-.progress-fill { height: 100%; background: linear-gradient(90deg, var(--oph-magenta) 0%, var(--oph-orange-yellow) 100%); width: 0%; transition: width 0.6s ease; }
+.progress-fill { 
+    height: 100%; 
+    background: #ffcc33; /* Fallback */
+    background: linear-gradient(90deg, var(--oph-magenta) 0%, var(--oph-orange-yellow) 100%); 
+    width: 0%; 
+    transition: width 0.6s ease; 
+}
 
 .view { display: none; width: 100%; }
 .view.active { display: block; animation: fadeIn 0.5s ease-out; }
