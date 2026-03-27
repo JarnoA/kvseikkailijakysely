@@ -239,6 +239,7 @@ var app = {
     state: {
         lang: 'fi',
         currentStep: 0,
+        transitioning: false,
         scores: { 'unelmoijakorento': 0, 'kehittajakehraaja': 0, 'hallintomittari': 0, 'seikkailijasirkka': 0, 'rohkaisijakuoriainen': 0, 'osallisuuskimalainen': 0 }
     },
 
@@ -287,6 +288,10 @@ var app = {
         var q = questions[this.state.currentStep];
         var total = questions.length;
         
+        var container = document.getElementById('options-container');
+        container.style.pointerEvents = 'auto'; // Re-enable interaction
+        container.innerHTML = ''; 
+
         document.getElementById('question-text').innerText = q.text;
         var stageLabel = (this.state.lang === 'en') ? 'Stage' : (this.state.lang === 'sv' ? 'Etapp' : 'Etappi');
         document.getElementById('question-counter').innerText = stageLabel + ' ' + (this.state.currentStep + 1) + ' / ' + total;
@@ -327,17 +332,29 @@ var app = {
             }
         }
 
-        var container = document.getElementById('options-container');
-        container.innerHTML = ''; 
-
         var self = this;
         q.options.forEach(function(opt) {
             var btn = document.createElement('button');
             btn.className = 'btn btn-outline fade-in';
             btn.innerText = opt.text;
             btn.onclick = function(e) { 
-                if (e.target) e.target.blur();
-                self.handleAnswer(opt.scores); 
+                if (self.state.transitioning) return;
+                self.state.transitioning = true;
+
+                // Visual feedback for iPad/iPhone
+                var target = e.target;
+                if (target) {
+                    target.classList.add('selected');
+                    target.blur();
+                }
+                
+                // Disable container to prevent phantom hovers on next buttons
+                container.style.pointerEvents = 'none';
+
+                // Small delay so user sees the "selected" color before next question
+                setTimeout(function() {
+                    self.handleAnswer(opt.scores); 
+                }, 100);
             };
             container.appendChild(btn);
         });
@@ -352,7 +369,10 @@ var app = {
         var self = this;
         if (this.state.currentStep < total) {
              document.getElementById('progress-fill').style.width = (this.state.currentStep / total) * 100 + '%';
-             setTimeout(function() { self.renderQuestion(); }, 200);
+             setTimeout(function() { 
+                 self.state.transitioning = false;
+                 self.renderQuestion(); 
+             }, 100);
         } else {
             this.finishQuiz();
         }

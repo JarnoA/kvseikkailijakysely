@@ -278,8 +278,11 @@ p {
 }
 
 /* Aktiivinen tila (napsautus/kosketus) kaikilla laitteilla */
-.btn-outline:active {
+.btn-outline:active, .btn-outline.selected {
     background: #66cccc !important;
+    background: var(--oph-turquoise) !important;
+    border-color: #66cccc !important;
+    border-color: var(--oph-turquoise) !important;
     color: white !important;
     transform: scale(0.98);
 }
@@ -287,6 +290,21 @@ p {
 /* Estetään fokuksen jääminen päälle kosketuksen jälkeen */
 .btn:focus {
     outline: none;
+}
+
+/* PARANOID HOVER RESET: Poistetaan kaikki hover-vaikutukset kosketuslaitteilta */
+@media (pointer: coarse) {
+    .btn:hover, .btn-outline:hover {
+        background-color: inherit !important;
+        color: inherit !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    /* Poikkeus: .selected class pitää värin */
+    .btn-outline.selected {
+        background-color: var(--oph-turquoise) !important;
+        color: white !important;
+    }
 }
 
 /* QR-KOODI: Keskitetty ja tilaa ympärille */
