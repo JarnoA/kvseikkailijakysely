@@ -29,12 +29,20 @@
             <h1>You are a Developer Moth!</h1>
             <p>You know where you're headed, even if you haven't seen the whole route yet. You have a way of also getting others to try things that are not yet possible. As you flutter towards new networks, you dream about concepts and methods, seminars, influencing decision-makers and bringing different perspectives together. You turn project ideas into solutions to the problems that you face.</p>
             
-            <div class="share-section" style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; text-align: center;">
+            <div class="share-section">
                 <p style="font-weight: bold; color: #006699; margin-bottom: 15px;">Share your result:</p>
-                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/?text=I%20am%20a%20Developer%20Moth%21%20Which%20adventurer%20are%20you%3F%20https%3A//kvseikkailijakysely.fi/en/tulokset/kehittajakehraaja.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #25D366; margin-bottom: 0;">WhatsApp</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//kvseikkailijakysely.fi/en/tulokset/kehittajakehraaja.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #1877F2; margin-bottom: 0;">Facebook</a>
-                    <button onclick="copyToClipboard()" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #666; margin-bottom: 0;">Copy Link</button>
+                <div class="share-wrapper">
+                    <button class="btn" style="width: auto; padding: 10px 30px; font-size: 18px; margin-bottom: 0;" onclick="toggleShare()">Share</button>
+                    <button class="btn" style="width: auto; padding: 10px 30px; font-size: 18px; background: #666; margin-bottom: 0;" onclick="copyLink()">Copy link</button>
+
+                    <div id="shareMenu" class="share-menu">
+                        <button onclick="shareWhatsApp()">WhatsApp</button>
+                        <button onclick="shareEmail()">Email</button>
+                        <div class="share-divider"></div>
+                        <button onclick="shareFacebook()">Facebook</button>
+                        <button onclick="shareX()">X</button>
+                        <button onclick="shareLinkedIn()">LinkedIn</button>
+                    </div>
                 </div>
             </div>
 
@@ -56,7 +64,24 @@
         </footer>
     </div>
     <script>
-        function copyToClipboard() {
+        var url = encodeURIComponent(window.location.href);
+        var text = encodeURIComponent(document.title);
+
+        function toggleShare() {
+            var menu = document.getElementById("shareMenu");
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                }).catch(function(err) {
+                    console.log("Share failed", err);
+                });
+                return;
+            }
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        function copyLink() {
             var dummy = document.createElement("input");
             document.body.appendChild(dummy);
             dummy.value = window.location.href;
@@ -65,6 +90,33 @@
             document.body.removeChild(dummy);
             alert("Link copied to clipboard!");
         }
+
+        function shareWhatsApp() {
+            window.open("https://wa.me/?text=" + text + "%20" + url);
+        }
+
+        function shareEmail() {
+            window.location.href = "mailto:?subject=" + text + "&body=" + url;
+        }
+
+        function shareFacebook() {
+            window.open("https://www.facebook.com/sharer/sharer.php?u=" + url);
+        }
+
+        function shareX() {
+            window.open("https://twitter.com/intent/tweet?url=" + url + "&text=" + text);
+        }
+
+        function shareLinkedIn() {
+            window.open("https://www.linkedin.com/sharing/share-offsite/?url=" + url);
+        }
+
+        document.addEventListener("click", function(e) {
+            var wrapper = document.querySelector(".share-wrapper");
+            if (wrapper && !wrapper.contains(e.target)) {
+                document.getElementById("shareMenu").style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>

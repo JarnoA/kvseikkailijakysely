@@ -74,8 +74,8 @@ sv_data = {
     },
     'osallisuuskimalainen': {
         'title': "Du är ett Delaktighetsbi!",
-        'desc': "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Du har tagit som din uppgift att se till att varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller så tar du målmedvetet reda på det.",
-        'info': "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-volontarverksamhet' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens volontärprojekt</a> och <a href='https://www.oph.fi/sv/program/erasmus-ungdomsutbyte' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsutbyten</a>.",
+        'desc': "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Du har tagit som din uppgift att se till att varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller niin että tar du målmedvetet reda på det.",
+        'info': "Ta gärna del av seuraavia: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-volontarverksamhet' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens volontärprojekt</a> och <a href='https://www.oph.fi/sv/program/erasmus-ungdomsutbyte' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsutbyten</a>.",
         'og_desc': "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Gör testet!"
     }
 }
@@ -150,12 +150,20 @@ template = """<!DOCTYPE html>
             <h1>{title}</h1>
             <p>{desc}</p>
             
-            <div class="share-section" style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; text-align: center;">
+            <div class="share-section">
                 <p style="font-weight: bold; color: #006699; margin-bottom: 15px;">{share_label}</p>
-                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <a href="https://wa.me/?text={share_text}" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #25D366; margin-bottom: 0;">WhatsApp</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={share_url}" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #1877F2; margin-bottom: 0;">Facebook</a>
-                    <button onclick="copyToClipboard()" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #666; margin-bottom: 0;">{copy_link_label}</button>
+                <div class="share-wrapper">
+                    <button class="btn" style="width: auto; padding: 10px 30px; font-size: 18px; margin-bottom: 0;" onclick="toggleShare()">{share_button_label}</button>
+                    <button class="btn" style="width: auto; padding: 10px 30px; font-size: 18px; background: #666; margin-bottom: 0;" onclick="copyLink()">{copy_link_label}</button>
+
+                    <div id="shareMenu" class="share-menu">
+                        <button onclick="shareWhatsApp()">WhatsApp</button>
+                        <button onclick="shareEmail()">{email_label}</button>
+                        <div class="share-divider"></div>
+                        <button onclick="shareFacebook()">Facebook</button>
+                        <button onclick="shareX()">X</button>
+                        <button onclick="shareLinkedIn()">LinkedIn</button>
+                    </div>
                 </div>
             </div>
 
@@ -177,7 +185,24 @@ template = """<!DOCTYPE html>
         </footer>
     </div>
     <script>
-        function copyToClipboard() {{
+        var url = encodeURIComponent(window.location.href);
+        var text = encodeURIComponent(document.title);
+
+        function toggleShare() {{
+            var menu = document.getElementById("shareMenu");
+            if (navigator.share) {{
+                navigator.share({{
+                    title: document.title,
+                    url: window.location.href
+                }}).catch(function(err) {{
+                    console.log("Share failed", err);
+                }});
+                return;
+            }}
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }}
+
+        function copyLink() {{
             var dummy = document.createElement("input");
             document.body.appendChild(dummy);
             dummy.value = window.location.href;
@@ -186,6 +211,33 @@ template = """<!DOCTYPE html>
             document.body.removeChild(dummy);
             alert("{copy_success_label}");
         }}
+
+        function shareWhatsApp() {{
+            window.open("https://wa.me/?text=" + text + "%20" + url);
+        }}
+
+        function shareEmail() {{
+            window.location.href = "mailto:?subject=" + text + "&body=" + url;
+        }}
+
+        function shareFacebook() {{
+            window.open("https://www.facebook.com/sharer/sharer.php?u=" + url);
+        }}
+
+        function shareX() {{
+            window.open("https://twitter.com/intent/tweet?url=" + url + "&text=" + text);
+        }}
+
+        function shareLinkedIn() {{
+            window.open("https://www.linkedin.com/sharing/share-offsite/?url=" + url);
+        }}
+
+        document.addEventListener("click", function(e) {{
+            var wrapper = document.querySelector(".share-wrapper");
+            if (wrapper && !wrapper.contains(e.target)) {{
+                document.getElementById("shareMenu").style.display = "none";
+            }}
+        }});
     </script>
 </body>
 </html>"""
@@ -198,9 +250,11 @@ labels = {
         'privacy_label': "Tietosuojaseloste",
         'accessibility_label': "Saavutettavuusseloste",
         'og_title_template': "Olen {char_name}! Mikä seikkailija sinä olet?",
-        'share_label': "Jaa tuloksesi somessa:",
+        'share_label': "Jaa tuloksesi:",
+        'share_button_label': "Jaa",
         'copy_link_label': "Kopioi linkki",
-        'copy_success_label': "Linkki kopioitu leikepöydälle!"
+        'copy_success_label': "Linkki kopioitu leikepöydälle!",
+        'email_label': "Sähköposti"
     },
     'en': {
         'your_result_label': "Your result:",
@@ -210,8 +264,10 @@ labels = {
         'accessibility_label': "Accessibility Statement",
         'og_title_template': "I am a {char_name}! Which adventurer are you?",
         'share_label': "Share your result:",
-        'copy_link_label': "Copy Link",
-        'copy_success_label': "Link copied to clipboard!"
+        'share_button_label': "Share",
+        'copy_link_label': "Copy link",
+        'copy_success_label': "Link copied to clipboard!",
+        'email_label': "Email"
     },
     'sv': {
         'your_result_label': "Ditt resultat:",
@@ -221,8 +277,10 @@ labels = {
         'accessibility_label': "Tillgänglighetsutlåtande",
         'og_title_template': "Jag är en {char_name}! Vilken äventyrare är du?",
         'share_label': "Dela ditt resultat:",
+        'share_button_label': "Dela",
         'copy_link_label': "Kopiera länk",
-        'copy_success_label': "Länken har kopierats!"
+        'copy_success_label': "Länken har kopierats!",
+        'email_label': "E-post"
     }
 }
 
@@ -281,9 +339,6 @@ for lang, data in [('fi', fi_data), ('en', en_data), ('sv', sv_data)]:
         char_name = char_names_clean[lang][char_key]
         og_title = labels[lang]['og_title_template'].format(char_name=char_name)
         
-        share_url = f"https://kvseikkailijakysely.fi/{lang}/tulokset/{char_key}.html"
-        share_text = urllib.parse.quote(f"{og_title} {share_url}")
-        
         file_content = template.format(
             lang=lang,
             title=content['title'],
@@ -303,10 +358,10 @@ for lang, data in [('fi', fi_data), ('en', en_data), ('sv', sv_data)]:
             accessibility_label=labels[lang]['accessibility_label'],
             accessibility_link=accessibility_link,
             share_label=labels[lang]['share_label'],
-            share_text=share_text,
-            share_url=urllib.parse.quote(share_url),
+            share_button_label=labels[lang]['share_button_label'],
             copy_link_label=labels[lang]['copy_link_label'],
-            copy_success_label=labels[lang]['copy_success_label']
+            copy_success_label=labels[lang]['copy_success_label'],
+            email_label=labels[lang]['email_label']
         )
         
         file_path = f"{lang}/tulokset/{char_key}.html"
