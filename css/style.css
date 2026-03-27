@@ -244,6 +244,7 @@ p {
     text-align: center;
     -webkit-tap-highlight-color: transparent; /* Fix for iOS flash */
     outline: none;
+    touch-action: manipulation;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -264,6 +265,7 @@ p {
     color: var(--oph-dark-blue); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     outline: none;
+    touch-action: manipulation;
 }
 
 /* Poistetaan stuck hover mobiililaitteilla */
@@ -294,9 +296,15 @@ p {
 
 /* PARANOID HOVER RESET: Poistetaan kaikki hover-vaikutukset kosketuslaitteilta */
 @media (pointer: coarse) {
-    .btn:hover, .btn-outline:hover {
-        background-color: inherit !important;
-        color: inherit !important;
+    .btn:hover, .btn:active, .btn:focus {
+        background-color: var(--oph-dark-blue) !important;
+        color: white !important;
+    }
+    .btn-outline:hover, .btn-outline:active, .btn-outline:focus {
+        background-color: white !important;
+        color: var(--oph-dark-blue) !important;
+    }
+    .btn:hover, .btn-outline:hover, .btn:active, .btn-outline:active, .btn:focus, .btn-outline:focus {
         transform: none !important;
         box-shadow: none !important;
     }
@@ -304,6 +312,7 @@ p {
     .btn-outline.selected {
         background-color: var(--oph-turquoise) !important;
         color: white !important;
+        transform: scale(0.98) !important;
     }
 }
 

@@ -369,10 +369,11 @@ var app = {
         var self = this;
         if (this.state.currentStep < total) {
              document.getElementById('progress-fill').style.width = (this.state.currentStep / total) * 100 + '%';
+             // Increased delay for iPad state clearing
              setTimeout(function() { 
                  self.state.transitioning = false;
                  self.renderQuestion(); 
-             }, 100);
+             }, 250);
         } else {
             this.finishQuiz();
         }
