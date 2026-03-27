@@ -17,7 +17,7 @@ var quizData = {
             },
             'hallintomittari': {
                 title: "Olet Hallintomittari!",
-                desc: "Mittailet maailmaa omalta paikaltasi ja huomaat helposti, missä apuasi tarvitaan. Lennähdät elegantisti manuaalista raportointilomakkeelle. Oletkin tärkeä osanen populaatiosi toiminnassa, sillä ilman sinua eivät pyörät pyörisi tai ideat löytäisi maaliin saakka.",
+                desc: "Mittailet maailmaa omalta paikaltasi ja huomaat helposti, missä apuasi tarvitaan. Sujahdat ketterästi manuaalista raportointilomakkeelle. Oletkin tärkeä osanen populaatiosi toiminnassa, sillä ilman sinua eivät pyörät pyörisi tai ideat löytäisi maaliin saakka.",
                 info: "Tutustu ainakin näihin: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisoalalle-hakuajat-ja-neuvonnat' target='_blank' rel='noopener noreferrer'>Hakuneuvonnat Erasmus+ -hankkeille</a> ja <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukkojen-hakuajat-ja-neuvonnat' target='_blank' rel='noopener noreferrer'>Euroopan solidaarisuusjoukot -hankkeille</a>, <a href='https://www.oph.fi/fi/ohjelmat/kansainvaliset-koulutukset-nuorisoalan-toimijoille' target='_blank' rel='noopener noreferrer'>kansainväliset koulutukset</a>.",
                 image: "../assets/images/hallintomittari.png",
                 rank: 3
@@ -25,7 +25,7 @@ var quizData = {
             'seikkailijasirkka': {
                 title: "Olet Seikkailijasirkka!",
                 desc: "Olet ollut monessa mukana, ja sinulta löytyy kokemusta kansainvälisyydestä sekä ulkomailta että kotimaassa. Seikkailunnälkäsi ei kuitenkaan ole vielä taltutettu, vaan tutkit jo seuraavia mahdollisuuksia hypätä junaan ja löytää uusia maisemia, joissa siritellä yksin tai yhdessä muiden kanssa!",
-                info: "Tutustu ainakin näihin: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuisotyontekijoiden-liikkuvuushanke' target='_blank' rel='noopener noreferrer'>Erasmus+ nuorisotyöntekijöiden liikkuvuushankkeet</a>, <a href='https://www.oph.fi/fi/ohjelmat/discovereu' target='_blank' rel='noopener noreferrer'>DiscoverEU</a>, <a href='https://www.oph.fi/fi/ohjelmat/kansainvaliset-koulutukset-nuorisoalan-toimijoille' target='_blank' rel='noopener noreferrer'>kansainväliset koulutukset</a>.",
+                info: "Tutustu ainakin näihin: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisotyontekijoiden-liikkuvuushanke' target='_blank' rel='noopener noreferrer'>Erasmus+ nuorisotyöntekijöiden liikkuvuushankkeet</a>, <a href='https://www.oph.fi/fi/ohjelmat/discovereu' target='_blank' rel='noopener noreferrer'>DiscoverEU</a>, <a href='https://www.oph.fi/fi/ohjelmat/kansainvaliset-koulutukset-nuorisoalan-toimijoille' target='_blank' rel='noopener noreferrer'>kansainväliset koulutukset</a>.",
                 image: "../assets/images/seikkailijasirkka.png",
                 rank: 4
             },
@@ -82,28 +82,28 @@ var quizData = {
             'unelmoijakorento': {
                 title: "You are a Dreamer Dragonfly!",
                 desc: "Your eyes have been opened to the wrongs of the world and you want to put right what's wrong. You are aware of your small size but don't let it get in the way of dreaming of change. You gather together with others to make your voice stronger. You're weighed down by inequality in the world, but you can also imagine a better future.",
-                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-solidaarisuushanke' target='_blank' rel='noopener noreferrer'>The European Solidarity Corps’ solidarity projects (in Finnish)</a> and <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank' rel='noopener noreferrer'>volunteer projects (in Finnish)</a> as well as <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international training</a>.",
+                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-solidaarisuushanke' target='_blank' rel='noopener noreferrer'>The European Solidarity Corps’ solidarity projects (in Finnish)</a> and <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank' rel='noopener noreferrer'>volunteer projects (in Finnish)</a> as well as <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international trainings</a>.",
                 image: "../assets/images/unelmoijakorento.png",
                 rank: 1
             },
             'kehittajakehraaja': {
                 title: "You are a Developer Moth!",
                 desc: "You know where you're headed, even if you haven't seen the whole route yet. You have a way of also getting others to try things that are not yet possible. As you flutter towards new networks, you dream about concepts and methods, seminars, influencing decision-makers and bringing different perspectives together. You turn project ideas into solutions to the problems that you face.",
-                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisoalalle-yhteistyohankkeet' target='_blank' rel='noopener noreferrer'>Erasmus+ partnerships for cooperation (in Finnish)</a> and <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international training</a>.",
+                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisoalalle-yhteistyohankkeet' target='_blank' rel='noopener noreferrer'>Erasmus+ partnerships for cooperation (in Finnish)</a> and <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international trainings</a>.",
                 image: "../assets/images/kehittajakehraaja.png",
                 rank: 2
             },
             'hallintomittari': {
                 title: "You are a Coordinating Caterpillar!",
                 desc: "You measure the world from where you are and can easily spot where your help is needed. You spring elegantly from manual to reporting form. You’re an important part of your population’s activities, as without you the wheels wouldn't turn or the ideas wouldn't reach the finish line.",
-                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisoalalle-hakuajat-ja-neuvonnat' target='_blank' rel='noopener noreferrer'>Briefings for Erasmus+ projects (in Finnish)</a> and <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukkojen-hakuajat-ja-neuvonnat' target='_blank' rel='noopener noreferrer'>European Solidarity Corps projects (in Finnish)</a>, <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international training</a>.",
+                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisoalalle-hakuajat-ja-neuvonnat' target='_blank' rel='noopener noreferrer'>Briefings for Erasmus+ projects (in Finnish)</a> and <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukkojen-hakuajat-ja-neuvonnat' target='_blank' rel='noopener noreferrer'>European Solidarity Corps projects (in Finnish)</a>, <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international trainings</a>.",
                 image: "../assets/images/hallintomittari.png",
                 rank: 3
             },
             'seikkailijasirkka': {
                 title: "You are an Adventure Cricket!",
                 desc: "You've been involved in many things and have international experience, both abroad and at home. But your thirst for adventure hasn’t been sated yet, which is why you're already exploring the next opportunities to hop on a train and discover new landscapes to explore alone or with others! The moments when you see young people's own wings carrying them make up for all the emergency landings on the rocks.",
-                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisotyontekijoiden-liikkuvuushanke' target='_blank' rel='noopener noreferrer'>Erasmus+ mobility of youth workers (in Finnish)</a>, <a href='https://www.oph.fi/fi/ohjelmat/discovereu' target='_blank' rel='noopener noreferrer'>DiscoverEU (in Finnish)</a>, <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international training</a>.",
+                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisotyontekijoiden-liikkuvuushanke' target='_blank' rel='noopener noreferrer'>Erasmus+ mobility of youth workers (in Finnish)</a>, <a href='https://www.oph.fi/fi/ohjelmat/discovereu' target='_blank' rel='noopener noreferrer'>DiscoverEU (in Finnish)</a>, <a href='https://www.oph.fi/en/education-development-and-internationalisation/erasmus-programme-finland-2021-2027/international-training-youth-sector' target='_blank' rel='noopener noreferrer'>international trainings</a>.",
                 image: "../assets/images/seikkailijasirkka.png",
                 rank: 4
             },
@@ -117,7 +117,7 @@ var quizData = {
             'osallisuuskimalainen': {
                 title: "You are a Participation Bee!",
                 desc: "You're inspired by young people finding new ways to make their voices heard. You've made it your business to make sure that every little creature in the garden has its place in the group. You know what kind of supported routes to the world are available, or at least you're determined to find out about them.",
-                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank' rel='noopener noreferrer'>European Solidarity Corps’ volunteer projects (in Finnish)</a>, <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisovaihto' target='_blank' rel='noopener noreferrer'>Erasmus+ youth exchanges (in Finnish)</a>.",
+                info: "Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank' rel='noopener noreferrer'>The European Solidarity Corps’ volunteer projects (in Finnish)</a>, <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisovaihto' target='_blank' rel='noopener noreferrer'>Erasmus+ youth exchanges (in Finnish)</a>.",
                 image: "../assets/images/osallisuuskimalainen.png",
                 rank: 6
             }
@@ -166,7 +166,7 @@ var quizData = {
             },
             'kehittajakehraaja': {
                 title: "Du är en Idéspinnare!",
-                desc: "Du vet vart du är på väg, även om du ännu inte ser hela vägen. Du får också andra että pröva på sådant som ännu inte är möjligt. När du rör dig mot nya nätverk drömmer du om begrepp och metoder, seminarier, påverkan på beslutsfattare och om att föra samman olika perspektiv. Du spinner vidare projektidéer till lösningar på de problem du möter.",
+                desc: "Du vet vart du är på väg, även om du ännu inte ser hela vägen. Du får också andra att pröva på sådant som ännu inte är möjligt. När du rör dig mot nya nätverk drömmer du om begrepp och metoder, seminarier, påverkan på beslutsfattare och om att föra samman olika perspektiv. Du spinner vidare projektidéer till lösningar på de problem du möter.",
                 info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/erasmus-ungdomssektorn-partnerskap-samarbete' target='_blank' rel='noopener noreferrer'>Erasmus+ partnerskap för samarbete</a> och <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank' rel='noopener noreferrer'>internationella utbildningar</a>.",
                 image: "../assets/images/kehittajakehraaja.png",
                 rank: 2
@@ -174,27 +174,27 @@ var quizData = {
             'hallintomittari': {
                 title: "Du är en Förvaltningsmätare!",
                 desc: "Du mäter världen från din egen plats och ser snabbt var din insats behövs. Du rör dig smidigt från manualer till rapporteringsblanketter. Du är en viktig del av helheten, för utan dig skulle hjulen inte snurra och idéerna inte nå hela vägen fram.",
-                info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/ansokningstiderna-och-radgivning-ansokan' target='_blank' rel='noopener noreferrer'>Ansökningsrådgivningar för Erasmus+-projekt</a> ja <a href='https://www.oph.fi/sv/program/ansokningstider-och-radgivningar-europeiska-solidaritetskaren' target='_blank' rel='noopener noreferrer'>projekt inom Europeiska solidaritetskåren</a>, <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank' rel='noopener noreferrer'>internationella utbildningar</a>.",
+                info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/ansokningstiderna-och-radgivning-ansokan' target='_blank' rel='noopener noreferrer'>Ansökningsrådgivningar för Erasmus+-projekt</a> och <a href='https://www.oph.fi/sv/program/ansokningstider-och-radgivningar-europeiska-solidaritetskaren' target='_blank' rel='noopener noreferrer'>projekt inom Europeiska solidaritetskåren</a>, <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank' rel='noopener noreferrer'>internationella utbildningar</a>.",
                 image: "../assets/images/hallintomittari.png",
                 rank: 3
             },
             'seikkailijasirkka': {
                 title: "Du är en Äventyrssyrsa!",
                 desc: "Du har varit med om mycket och har erfarenhet av internationella sammanhang både utomlands och i Finland. Din äventyrslust är dock fortfarande inte stillad – du utforskar redan nya möjligheter att hoppa på tåget och upptäcka nya miljöer där du kan spela ensam eller tillsammans med andra! De stunder då du ser de ungas egna vingar bära väger upp alla nödlandningar som slutat i stenig terräng.",
-                info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/discovereu' target='_blank' rel='noopener noreferrer'>DiscoverEU</a>, <a href='https://www.oph.fi/sv/program/erasmus-mobilitetsprojekt-ungdomsarbetare' target='_blank' rel='noopener noreferrer'>Erasmus+ mobilitetsprojekt för ungdomsarbetare</a> och <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank' rel='noopener noreferrer'>internationella utbildningar</a>.",
+                info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/erasmus-mobilitetsprojekt-ungdomsarbetare' target='_blank' rel='noopener noreferrer'>Erasmus+ mobilitetsprojekt för ungdomsarbetare</a>, <a href='https://www.oph.fi/sv/program/discovereu' target='_blank' rel='noopener noreferrer'>DiscoverEU</a>, <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank' rel='noopener noreferrer'>internationella utbildningar</a>.",
                 image: "../assets/images/seikkailijasirkka.png",
                 rank: 4
             },
             'rohkaisijakuoriainen': {
                 title: "Du är en Uppmuntrarbagge!",
-                desc: "Du ser till että alla känner sig hörda och sedda. Du är redo että hjälpa till i alla situationer. Du viskar uppmuntrande ord och känner till de vägar och möjligheter som ligger framför. Du ger dem omkring dig, både unga och kollegor, mod että bre ut sina vingar inför det nya!",
-                info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/internationalisering/eurodesk' target='_blank' rel='noopener noreferrer'>Eurodesk-nätverket för ungdomsinformation</a>, <a href='https://www.oph.fi/sv/program/erasmus-ungdomsverksamhet' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsverksamhet</a> ja <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-solidaritetsprojekt' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens solidaritetsprojekt</a>.",
+                desc: "Du ser till att alla känner sig hörda och sedda. Du är redo att hjälpa till i alla situationer. Du viskar uppmuntrande ord och känner till de vägar och möjligheter som ligger framför. Du ger dem omkring dig, både unga och kollegor, mod att bre ut sina vingar inför det nya!",
+                info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-solidaritetsprojekt' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens solidaritetsprojekt</a>, <a href='https://www.oph.fi/sv/program/erasmus-ungdomsverksamhet' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsverksamhet</a> och <a href='https://www.oph.fi/sv/internationalisering/eurodesk' target='_blank' rel='noopener noreferrer'>Eurodesk-nätverket för ungdomsinformation</a>.",
                 image: "../assets/images/rohkaisijakuoriainen.png",
                 rank: 5
             },
             'osallisuuskimalainen': {
                 title: "Du är ett Delaktighetsbi!",
-                desc: "Du surrar av iver när unga hittar nya sätt että göra sin egen röst hörd. Du har tagit som din uppgift että se till että varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller så tar du målmedvetet reda på det.",
+                desc: "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Du har tagit som din uppgift att se till att varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller så tar du målmedvetet reda på det.",
                 info: "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-volontarverksamhet' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens volontärprojekt</a> och <a href='https://www.oph.fi/sv/program/erasmus-ungdomsutbyte' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsutbyten</a>.",
                 image: "../assets/images/osallisuuskimalainen.png",
                 rank: 6
@@ -205,13 +205,13 @@ var quizData = {
                 { text: "Jag deltar i en demonstration eller annan synlig påverkan.", scores: { 'unelmoijakorento': 3, 'osallisuuskimalainen': 3 } },
                 { text: "Jag skriver en skriftlig ansökan, ett ställningstagande eller respons till beslutsfattarna.", scores: { 'kehittajakehraaja': 3, 'hallintomittari': 3 } },
                 { text: "Jag arbetar ute på fältet med unga och organiserar verksamhet tillsammans med dem.", scores: { 'seikkailijasirkka': 3 } },
-                { text: "Jag börjar med että lyssna på andras tankar och erfarenheter i frågan.", scores: { 'rohkaisijakuoriainen': 3 } }
+                { text: "Jag börjar med att lyssna på andras tankar och erfarenheter i frågan.", scores: { 'rohkaisijakuoriainen': 3 } }
             ]},
-            { text: "Vilket av följande tycker du mest om että göra?", options: [
+            { text: "Vilket av följande tycker du mest om att göra?", options: [
                 { text: "Att se hur någon vågar göra något nytt.", scores: { 'rohkaisijakuoriainen': 2, 'osallisuuskimalainen': 2 } },
                 { text: "Att vandra på gatorna i en ny stad tillsammans med andra.", scores: { 'seikkailijasirkka': 2, 'unelmoijakorento': 2 } },
                 { text: "Att lösa ett verkligt problem med hjälp av smidig excel-användning.", scores: { 'hallintomittari': 2 } },
-                { text: "Att dela idéer ja erfarenheter med nya bekantskaper för että skapa något helt nytt.", scores: { 'kehittajakehraaja': 2 } }
+                { text: "Att dela idéer och erfarenheter med nya bekantskaper för att skapa något helt nytt.", scores: { 'kehittajakehraaja': 2 } }
             ]},
             { text: "Ni arbetar med ett gemensamt projekt i en liten grupp. Vilken roll passar dig bäst?", options: [
                 { text: "Jag är en bakgrundspåverkare som sköter mitt eget delområde.", scores: { 'hallintomittari': 2 } },
@@ -229,7 +229,7 @@ var quizData = {
                 { text: "Nöden är uppfinningarnas moder.", scores: { 'osallisuuskimalainen': 1, 'seikkailijasirkka': 1 } },
                 { text: "Man överger inte en kamrat.", scores: { 'rohkaisijakuoriainen': 1 } },
                 { text: "Välplanerat är hälften gjort.", scores: { 'hallintomittari': 1 } },
-                { text: "Det är bäst että sova på saken.", scores: { 'unelmoijakorento': 1, 'kehittajakehraaja': 1 } }
+                { text: "Det är bäst att sova på saken.", scores: { 'unelmoijakorento': 1, 'kehittajakehraaja': 1 } }
             ]}
         ]
     }
@@ -335,7 +335,10 @@ var app = {
             var btn = document.createElement('button');
             btn.className = 'btn btn-outline fade-in';
             btn.innerText = opt.text;
-            btn.onclick = function() { self.handleAnswer(opt.scores); };
+            btn.onclick = function(e) { 
+                if (e.target) e.target.blur();
+                self.handleAnswer(opt.scores); 
+            };
             container.appendChild(btn);
         });
     },

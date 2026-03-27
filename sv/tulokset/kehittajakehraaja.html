@@ -28,16 +28,25 @@
             <h2>Ditt resultat:</h2>
             <h1>Du är en Idéspinnare!</h1>
             <p>Du vet vart du är på väg, även om du ännu inte ser hela vägen. Du får också andra att pröva på sådant som ännu inte är möjligt. När du rör dig mot nya nätverk drömmer du om begrepp och metoder, seminarier, påverkan på beslutsfattare och om att föra samman olika perspektiv. Du spinner vidare projektidéer till lösningar på de problem du möter.</p>
-            <p class="illustration-credit">Bild: Minttu Nurmi</p>
+            
+            <div class="share-section" style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; text-align: center;">
+                <p style="font-weight: bold; color: #006699; margin-bottom: 15px;">Dela ditt resultat:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/?text=Jag%20%C3%A4r%20en%20Id%C3%A9spinnare%21%20Vilken%20%C3%A4ventyrare%20%C3%A4r%20du%3F%20https%3A//kvseikkailijakysely.fi/sv/tulokset/kehittajakehraaja.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #25D366; margin-bottom: 0;">WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//kvseikkailijakysely.fi/sv/tulokset/kehittajakehraaja.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #1877F2; margin-bottom: 0;">Facebook</a>
+                    <button onclick="copyToClipboard()" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #666; margin-bottom: 0;">Kopiera länk</button>
+                </div>
+            </div>
+
             <div class="result-extra">
                 <h3>Mer information:</h3>
-                <p>Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/erasmus-ungdomssektorn-partnerskap-samarbete' target='_blank'>Erasmus+ partnerskap för samarbete</a> och <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank'>internationella utbildningar</a>.</p>
+                <p>Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/erasmus-ungdomssektorn-partnerskap-samarbete' target='_blank' rel='noopener noreferrer'>Erasmus+ partnerskap för samarbete</a> och <a href='https://www.oph.fi/sv/program/internationella-utbildningar-aktorer-pa-ungdomsomradet' target='_blank' rel='noopener noreferrer'>internationella utbildningar</a>.</p>
             </div>
             <a href="../../sv/index.html" class="btn">Gör testet själv!</a>
             <div class="logo-grid">
                 <img src="../../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="EDUFI">
-                <img src="../../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
-                <img src="../../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                <img src="../../assets/images/Erasmus+_with_baseline-pos-ALL_lang_SV.png" alt="Erasmus+">
+                <img src="../../assets/images/SolidarityCorps_without_tagline-SV.png" alt="Solidarity Corps">
                 <img src="../../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
             </div>
         </div>
@@ -46,5 +55,16 @@
             <a href="../../sv/saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Tillgänglighetsutlåtande</a>
         </footer>
     </div>
+    <script>
+        function copyToClipboard() {
+            var dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert("Länken har kopierats!");
+        }
+    </script>
 </body>
 </html>

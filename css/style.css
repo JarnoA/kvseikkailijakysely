@@ -220,11 +220,13 @@ p {
     margin-bottom: 20px; 
 }
 
-/* Linkit mustaksi */
+/* Linkit mustaksi ja väliä väliin */
 .result-extra a {
     color: black !important;
     font-weight: bold;
     text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
 /* NÄPPÄIMET: Verdana, lihava, keskitetty */
@@ -240,10 +242,20 @@ p {
     box-shadow: 0 6px 15px rgba(0, 102, 153, 0.2);
     display: flex; justify-content: center; align-items: center;
     text-align: center;
+    -webkit-tap-highlight-color: transparent; /* Fix for iOS flash */
+    outline: none;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover {
+        background: #004d73; /* Darker blue on hover for mouse users */
+        transform: translateY(-2px);
+    }
+}
+
 .btn:active { transform: scale(0.96); }
 
-/* Vastausnapit valkoisena, hover turkoosina */
+/* Vastausnapit valkoisena, hover turkoosina (vain hiirellä) */
 .btn-outline { 
     background: #ffffff; 
     border: 3px solid #66cccc; /* Fallback */
@@ -251,13 +263,30 @@ p {
     color: #006699; /* Fallback */
     color: var(--oph-dark-blue); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    outline: none;
 }
-.btn-outline:hover { 
-    background: #66cccc; /* Fallback */
-    background: var(--oph-turquoise); 
-    border-color: #66cccc; /* Fallback */
-    border-color: var(--oph-turquoise);
-    color: white;
+
+/* Poistetaan stuck hover mobiililaitteilla */
+@media (hover: hover) and (pointer: fine) {
+    .btn-outline:hover { 
+        background: #66cccc; /* Fallback */
+        background: var(--oph-turquoise); 
+        border-color: #66cccc; /* Fallback */
+        border-color: var(--oph-turquoise);
+        color: white;
+    }
+}
+
+/* Aktiivinen tila (napsautus/kosketus) kaikilla laitteilla */
+.btn-outline:active {
+    background: #66cccc !important;
+    color: white !important;
+    transform: scale(0.98);
+}
+
+/* Estetään fokuksen jääminen päälle kosketuksen jälkeen */
+.btn:focus {
+    outline: none;
 }
 
 /* QR-KOODI: Keskitetty ja tilaa ympärille */

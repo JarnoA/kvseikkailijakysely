@@ -28,16 +28,25 @@
             <h2>Tuloksesi:</h2>
             <h1>Olet Unelmoijakorento!</h1>
             <p>Silmäsi ovat avautuneet maailman vääryyksille ja haluat korjata sen, mikä on pielessä. Tunnistat pienen kokosi mutta et anna sen haitata muutoksesta unelmointia. Kokoonnut yhteen muiden kanssa, jotta äänenne olisi vahvempi. Maailman eriarvoisuus painaa siipiäsi, mutta toisaalta osaat kuvitella paremman tulevaisuuden.</p>
-            <p class="illustration-credit">Kuvitus: Minttu Nurmi</p>
+            
+            <div class="share-section" style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; text-align: center;">
+                <p style="font-weight: bold; color: #006699; margin-bottom: 15px;">Jaa tuloksesi somessa:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/?text=Olen%20Unelmoijakorento%21%20Mik%C3%A4%20seikkailija%20sin%C3%A4%20olet%3F%20https%3A//kvseikkailijakysely.fi/fi/tulokset/unelmoijakorento.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #25D366; margin-bottom: 0;">WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//kvseikkailijakysely.fi/fi/tulokset/unelmoijakorento.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #1877F2; margin-bottom: 0;">Facebook</a>
+                    <button onclick="copyToClipboard()" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #666; margin-bottom: 0;">Kopioi linkki</button>
+                </div>
+            </div>
+
             <div class="result-extra">
                 <h3>Lisätietoa:</h3>
-                <p>Tutustu ainakin näihin: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-solidaarisuushanke' target='_blank'>Euroopan solidaarisuusjoukkojen solidaarisuushankkeet</a> ja <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank'>vapaaehtoishankkeet</a> sekä <a href='https://www.oph.fi/fi/ohjelmat/kansainvaliset-koulutukset-nuorisoalan-toimijoille' target='_blank'>kansainväliset koulutukset</a>.</p>
+                <p>Tutustu ainakin näihin: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-solidaarisuushanke' target='_blank' rel='noopener noreferrer'>Euroopan solidaarisuusjoukkojen solidaarisuushankkeet</a> ja <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank' rel='noopener noreferrer'>vapaaehtoishankkeet</a> sekä <a href='https://www.oph.fi/fi/ohjelmat/kansainvaliset-koulutukset-nuorisoalan-toimijoille' target='_blank' rel='noopener noreferrer'>kansainväliset koulutukset</a>.</p>
             </div>
             <a href="../../fi/index.html" class="btn">Tee testi itse!</a>
             <div class="logo-grid">
                 <img src="../../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="EDUFI">
-                <img src="../../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
-                <img src="../../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                <img src="../../assets/images/Erasmus+_left_with_baseline-pos-ALL_lang_FI.png" alt="Erasmus+">
+                <img src="../../assets/images/Solidaarisuusjoukot.png" alt="Solidarity Corps">
                 <img src="../../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
             </div>
         </div>
@@ -46,5 +55,16 @@
             <a href="../../fi/saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Saavutettavuusseloste</a>
         </footer>
     </div>
+    <script>
+        function copyToClipboard() {
+            var dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert("Linkki kopioitu leikepöydälle!");
+        }
+    </script>
 </body>
 </html>

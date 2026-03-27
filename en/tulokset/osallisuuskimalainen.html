@@ -28,16 +28,25 @@
             <h2>Your result:</h2>
             <h1>You are a Participation Bee!</h1>
             <p>You're inspired by young people finding new ways to make their voices heard. You've made it your business to make sure that every little creature in the garden has its place in the group. You know what kind of supported routes to the world are available, or at least you're determined to find out about them.</p>
-            <p class="illustration-credit">Illustration by: Minttu Nurmi</p>
+            
+            <div class="share-section" style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; text-align: center;">
+                <p style="font-weight: bold; color: #006699; margin-bottom: 15px;">Share your result:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/?text=I%20am%20a%20Participation%20Bee%21%20Which%20adventurer%20are%20you%3F%20https%3A//kvseikkailijakysely.fi/en/tulokset/osallisuuskimalainen.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #25D366; margin-bottom: 0;">WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//kvseikkailijakysely.fi/en/tulokset/osallisuuskimalainen.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #1877F2; margin-bottom: 0;">Facebook</a>
+                    <button onclick="copyToClipboard()" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #666; margin-bottom: 0;">Copy Link</button>
+                </div>
+            </div>
+
             <div class="result-extra">
                 <h3>More information:</h3>
-                <p>Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank'>European Solidarity Corps’ volunteer projects (in Finnish)</a>, <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisovaihto' target='_blank'>Erasmus+ youth exchanges (in Finnish)</a>.</p>
+                <p>Check out at least the following: <a href='https://www.oph.fi/fi/ohjelmat/euroopan-solidaarisuusjoukot-vapaaehtoistoiminta' target='_blank' rel='noopener noreferrer'>The European Solidarity Corps’ volunteer projects (in Finnish)</a>, <a href='https://www.oph.fi/fi/ohjelmat/erasmus-nuorisovaihto' target='_blank' rel='noopener noreferrer'>Erasmus+ youth exchanges (in Finnish)</a>.</p>
             </div>
             <a href="../../en/index.html" class="btn">Take the test yourself!</a>
             <div class="logo-grid">
                 <img src="../../assets/images/OPH_En_vaaka_rgb.png" alt="EDUFI">
-                <img src="../../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
-                <img src="../../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                <img src="../../assets/images/Erasmus+_with_baseline-pos-ALL_lang_EN.png" alt="Erasmus+">
+                <img src="../../assets/images/SolidarityCorps_without_tagline-EN.png" alt="Solidarity Corps">
                 <img src="../../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
             </div>
         </div>
@@ -46,5 +55,16 @@
             <a href="../../en/saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Accessibility Statement</a>
         </footer>
     </div>
+    <script>
+        function copyToClipboard() {
+            var dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert("Link copied to clipboard!");
+        }
+    </script>
 </body>
 </html>

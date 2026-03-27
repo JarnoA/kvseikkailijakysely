@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Du är en Uppmuntrarbagge!</title>
     <meta property="og:title" content="Jag är en Uppmuntrarbagge! Vilken äventyrare är du?">
-    <meta property="og:description" content="Du ser till että alla känner sig hörda och sedda. Gör testet och ta reda på vilken karaktär du är!">
+    <meta property="og:description" content="Du ser till att alla känner sig hörda och sedda. Gör testet och ta reda på vilken karaktär du är!">
     <meta property="og:image" content="https://kvseikkailijakysely.fi/assets/images/rohkaisijakuoriainen.png">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="https://cdn.counter.dev/script.js" data-id="4dd6d014-e826-4cda-8265-b742387017fc" data-utcoffset="2"></script>
@@ -27,17 +27,26 @@
         <div class="content-area">
             <h2>Ditt resultat:</h2>
             <h1>Du är en Uppmuntrarbagge!</h1>
-            <p>Du ser till että alla känner sig hörda och sedda. Du är redo att hjälpa till i alla situationer. Du viskar uppmuntrande ord och känner till de vägar och möjligheter som ligger framför. Du ger dem omkring dig, både unga och kollegor, mod att bre ut sina vingar inför det nya!</p>
-            <p class="illustration-credit">Bild: Minttu Nurmi</p>
+            <p>Du ser till att alla känner sig hörda och sedda. Du är redo att hjälpa till i alla situationer. Du viskar uppmuntrande ord och känner till de vägar och möjligheter som ligger framför. Du ger dem omkring dig, både unga och kollegor, mod att bre ut sina vingar inför det nya!</p>
+            
+            <div class="share-section" style="margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 15px; text-align: center;">
+                <p style="font-weight: bold; color: #006699; margin-bottom: 15px;">Dela ditt resultat:</p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://wa.me/?text=Jag%20%C3%A4r%20en%20Uppmuntrarbagge%21%20Vilken%20%C3%A4ventyrare%20%C3%A4r%20du%3F%20https%3A//kvseikkailijakysely.fi/sv/tulokset/rohkaisijakuoriainen.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #25D366; margin-bottom: 0;">WhatsApp</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//kvseikkailijakysely.fi/sv/tulokset/rohkaisijakuoriainen.html" target="_blank" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #1877F2; margin-bottom: 0;">Facebook</a>
+                    <button onclick="copyToClipboard()" class="btn" style="width: auto; padding: 10px 20px; font-size: 16px; background: #666; margin-bottom: 0;">Kopiera länk</button>
+                </div>
+            </div>
+
             <div class="result-extra">
                 <h3>Mer information:</h3>
-                <p>Ta gärna del av följande: <a href='https://www.oph.fi/sv/internationalisering/eurodesk' target='_blank'>Eurodesk-nätverket för ungdomsinformation</a>, <a href='https://www.oph.fi/sv/program/erasmus-ungdomsverksamhet' target='_blank'>Erasmus+ ungdomsverksamhet</a> ja <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-solidaritetsprojekt' target='_blank'>Europeiska solidaritetskårens solidaritetsprojekt</a>.</p>
+                <p>Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-solidaritetsprojekt' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens solidaritetsprojekt</a>, <a href='https://www.oph.fi/sv/program/erasmus-ungdomsverksamhet' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsverksamhet</a> och <a href='https://www.oph.fi/sv/internationalisering/eurodesk' target='_blank' rel='noopener noreferrer'>Eurodesk-nätverket för ungdomsinformation</a>.</p>
             </div>
             <a href="../../sv/index.html" class="btn">Gör testet själv!</a>
             <div class="logo-grid">
                 <img src="../../assets/images/OPH_Su_Ru_vaaka_RGB.png" alt="EDUFI">
-                <img src="../../assets/images/Erasmus+_Su_Ru_En.png" alt="Erasmus+">
-                <img src="../../assets/images/Solidaarisuusjoukot_logo_Su_En_Ru.png" alt="Solidarity Corps">
+                <img src="../../assets/images/Erasmus+_with_baseline-pos-ALL_lang_SV.png" alt="Erasmus+">
+                <img src="../../assets/images/SolidarityCorps_without_tagline-SV.png" alt="Solidarity Corps">
                 <img src="../../assets/images/Eurodesk_Su_Ru_En.png" alt="Eurodesk">
             </div>
         </div>
@@ -46,5 +55,16 @@
             <a href="../../sv/saavutettavuus.html" style="color: #666; text-decoration: none; font-size: 14px;">Tillgänglighetsutlåtande</a>
         </footer>
     </div>
+    <script>
+        function copyToClipboard() {
+            var dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert("Länken har kopierats!");
+        }
+    </script>
 </body>
 </html>
