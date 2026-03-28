@@ -391,7 +391,7 @@ var app = {
         
         // Redirect to the "fair" version of the result page for accurate analytics
         // This version includes the QR code for users to scan on their phones.
-        var fairUrl = this.state.lang + '/tulokset/fair/' + winnerKey + '.html';
+        var fairUrl = 'tulokset/fair/' + winnerKey + '.html';
         window.location.href = fairUrl;
     },
 
