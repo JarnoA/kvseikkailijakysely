@@ -289,8 +289,14 @@ var app = {
         var total = questions.length;
         
         var container = document.getElementById('options-container');
-        container.style.pointerEvents = 'auto'; // Re-enable interaction
-        container.innerHTML = ''; 
+        // Clean up any lingering .selected classes before clearing DOM
+        var buttonsWithSelected = container.querySelectorAll('.btn.selected');
+        for (var i = 0; i < buttonsWithSelected.length; i++) {
+            buttonsWithSelected[i].classList.remove('selected');
+        }
+        container.style.pointerEvents = 'auto';
+        container.innerHTML = '';
+        void container.offsetWidth; // Force reflow to ensure iOS/Safari completes DOM update 
 
         document.getElementById('question-text').innerText = q.text;
         var stageLabel = (this.state.lang === 'en') ? 'Stage' : (this.state.lang === 'sv' ? 'Etapp' : 'Etappi');
@@ -385,7 +391,7 @@ var app = {
         
         // Redirect to the "fair" version of the result page for accurate analytics
         // This version includes the QR code for users to scan on their phones.
-        var fairUrl = 'tulokset/fair/' + winnerKey + '.html';
+        var fairUrl = this.state.lang + '/tulokset/fair/' + winnerKey + '.html';
         window.location.href = fairUrl;
     },
 
