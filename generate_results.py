@@ -142,7 +142,7 @@ template = """<!DOCTYPE html>
                 <div class="layer layer-front" id="mountains-mid"></div>
             </div>
             <div class="character-container result-mode">
-                <img src="../../assets/images/{char_key}.png" class="character-img" alt="Character">
+                <img src="../../assets/images/{char_key}.png" class="character-img" alt="{title}">
             </div>
         </div>
         <div class="content-area">
