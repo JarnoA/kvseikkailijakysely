@@ -229,6 +229,18 @@ p {
     margin-bottom: 8px;
 }
 
+/* Spacing fixes for result pages */
+.qr-section {
+    margin: 0 !important;
+}
+.qr-section p {
+    margin-top: 0 !important;
+}
+.result-extra h3 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
 /* NÄPPÄIMET: Verdana, lihava, keskitetty */
 .btn {
     background: #006699; /* Fallback */
