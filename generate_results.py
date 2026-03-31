@@ -74,7 +74,7 @@ sv_data = {
     },
     'osallisuuskimalainen': {
         'title': "Du är ett Delaktighetsbi!",
-        'desc': "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Du har tagit som din uppgift att se till att varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller niin että tar du målmedvetet reda på det.",
+        'desc': "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Du har tagit som din uppgift att se till att varje liten varelse i trädgården har sin egen plats i gruppen. Du vet vilka stödda rutter som erbjuds till världen, eller så tar du målmedvetet reda på det.",
         'info': "Ta gärna del av följande: <a href='https://www.oph.fi/sv/program/europeiska-solidaritetskaren-volontarverksamhet' target='_blank' rel='noopener noreferrer'>Europeiska solidaritetskårens volontärprojekt</a><br> och <a href='https://www.oph.fi/sv/program/erasmus-ungdomsutbyte' target='_blank' rel='noopener noreferrer'>Erasmus+ ungdomsutbyten</a>.",
         'og_desc': "Du surrar av iver när unga hittar nya sätt att göra sin egen röst hörd. Gör testet!"
     }
