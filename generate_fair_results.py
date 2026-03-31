@@ -151,6 +151,7 @@ labels = {
         'more_info_label': "Lisätietoa:",
         'restart_label': "Aloita alusta",
         'scan_label': "Skannaa QR-koodi ja ota tulos talteen!",
+        'scan_link_text': "Ota tulos talteen ja jaettavaksi tästä.",
         'illustration_label': "Kuvitus: Minttu Nurmi",
         'privacy_label': "Tietosuojaseloste",
         'accessibility_label': "Saavutettavuusseloste",
@@ -161,6 +162,7 @@ labels = {
         'more_info_label': "More information:",
         'restart_label': "Start Over",
         'scan_label': "Scan the QR code to take the result with you!",
+        'scan_link_text': "Save your result and share it here.",
         'illustration_label': "Illustration by: Minttu Nurmi",
         'privacy_label': "Privacy Policy",
         'accessibility_label': "Accessibility Statement",
@@ -171,6 +173,7 @@ labels = {
         'more_info_label': "Mer information:",
         'restart_label': "Börja om",
         'scan_label': "Skanna QR-koden och spara ditt resultat!",
+        'scan_link_text': "Spara ditt resultat och dela det här.",
         'illustration_label': "Bild: Minttu Nurmi",
         'privacy_label': "Integritetspolicy",
         'accessibility_label': "Tillgänglighetsutlåtande",
@@ -211,10 +214,10 @@ template_fair = """<!DOCTYPE html>
             <p>{desc}</p>
             <p class="illustration-credit">{illustration_label}</p>
             
-            <div class="qr-section" style="text-align: center; margin: 10px 0 30px 0; padding: 20px; background: rgba(255,255,255,0.5); border-radius: 15px;">
-                <p style="margin-bottom: 15px; font-weight: bold; color: #006699;">{scan_label}</p>
+            <div class="qr-section" style="text-align: center; margin: 0 0 10px 0; padding: 10px 20px 20px 20px; background: rgba(255,255,255,0.5); border-radius: 15px;">
+                <p style="margin-bottom: 10px; font-weight: bold; color: #006699;">{scan_label}</p>
                 <div id="qr-code-container" style="display: flex; justify-content: center;"></div>
-                <p style="margin-top: 15px; font-size: 14px;"><a href="https://kvseikkailijakysely.fi/{lang}/tulokset/{char_key}.html" style="color: #006699;">kvseikkailijakysely.fi/{lang}/tulokset/{char_key}.html</a></p>
+                <p style="margin-top: 30px; margin-bottom: 0; font-size: 14px;"><a href="https://kvseikkailijakysely.fi/{lang}/tulokset/{char_key}.html" style="color: #006699;">{scan_link_text}</a></p>
             </div>
 
             <div class="result-extra">
@@ -295,6 +298,7 @@ for lang, data in [('fi', fi_data), ('en', en_data), ('sv', sv_data)]:
             info=content['info'],
             restart_label=labels[lang]['restart_label'],
             scan_label=labels[lang]['scan_label'],
+            scan_link_text=labels[lang]['scan_link_text'],
             illustration_label=labels[lang]['illustration_label'],
             privacy_label=labels[lang]['privacy_label'],
             privacy_link=privacy_link,
